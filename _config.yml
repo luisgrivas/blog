@@ -28,7 +28,7 @@ twitter_username: luisgrivas
 github_username: luisgrivas
 
 # Build settings
-# theme: minima
+theme: minima
 plugins:
   - jekyll-feed
 
