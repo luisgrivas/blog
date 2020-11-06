@@ -1,7 +1,8 @@
 ---
 layout: page
-title: About
+title: Acerca de
 permalink: /about/
 ---
 
 Hola!
+
