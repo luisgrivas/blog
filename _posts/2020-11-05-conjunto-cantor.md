@@ -2,7 +2,9 @@
 layout: post
 title: "Temas relacionados con el conjunto de Cantor"
 date:   2020-11-06 13:38:00 -600
-categories: analisis topologia
+last_modified_at: 2020-11-07 10:15:00
+category: post
+tags: [analisis, topologia]
 ---
 
 ## Conjunto de Cantor
