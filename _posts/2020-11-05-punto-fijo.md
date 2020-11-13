@@ -13,7 +13,7 @@ Cuando tratamos temas de continuidad comúnmente utilizamos alguna derivación d
 
 **Proposición**. Sean $ f, g: [a, b] \rightarrow \mathbb{R}$ funciones continuas tales que $f(a) \leq g(a)$ y  $f(b) \geq g(b)$. Entonces existe $x \in [a, b]$ tal que $ f(c) = g(c)$.
 
-El argumento central de la demostración se basa en la siguiente observación. Si existe un $ p \in \R$ diferente de $1$ que es punto fijo de la función $ f$, entonces $1$ no puede aparecer en la sucesión $ f(p), f(f(p)), f(f(f(p))), \ldots$; esto contradiría la hipótesis del problema. Con esto en mente y con la proposición anterior a la mano, veamos la solución.
+El argumento central de la demostración se basa en la siguiente observación. Si existe un $ p \in \mathbb{R}$ diferente de $1$ que es punto fijo de la función $ f$, entonces $1$ no puede aparecer en la sucesión $ f(p), f(f(p)), f(f(f(p))), \ldots$; esto contradiría la hipótesis del problema. Con esto en mente y con la proposición anterior a la mano, veamos la solución.
 
 **Solución**: Procedamos por contradicción. Suponga que $ f(1) \neq 1$ y consideremos el caso $ f(1) > 1$ (el caso $f(1) < 1 $ se resuelve de manera similar). Sea $e: \mathbb{R} \rightarrow \mathbb{R}$ la función identidad en los reales y sea $ n$ el natural más pequeño que satisface $ f^{(n)}(1) \leq 1$. Observe que $ f(1) > 1 = e(1) $ y $f(f^{(n-1)}(1)) \leq 1 < f^{(n-1)}(1) =  e(f^{(n-1)}(1))$. Entonces existe un $p \in (1, f^{(n-1)}(1))$ tal que $ f(p) = e(p) = p$. Esto contradice la hipótesis del problema. Por tanto, la suposición $f(1) \neq 1$ debe ser falsa. $\blacksquare$
 
