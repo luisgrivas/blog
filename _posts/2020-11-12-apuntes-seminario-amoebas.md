@@ -1,7 +1,7 @@
 ---
-layout: posts
-title: "Apuntes Seminario Amoebas 12-20"
-date: 2020-11-12 17:00:00
+layout: post
+title:  "Apuntes Seminario Amoebas 12-20"
+date:   2020-11-12 17:00:00
 categories: posts
 tags: [teoria-de-graficas]
 ---
@@ -28,13 +28,12 @@ $\lambda_\sigma: V \rightarrow [n]$, definida como  $\lambda_\sigma(v_i) = \sigm
 
 Para cada $\sigma \in S_n$ (permutación de $[n]$), definamos $G_\sigma = (V, E(G_\sigma))$, donde $E(G_\sigma) = \\{ v_{\sigma^{-1}(i)} v_{\sigma^{-1}(j)}: ij \in L_G \\} = \\{v_i v_j: \sigma(i)\sigma(j) \in L_G\\}$.
 
-**Observación**: $\\{\sigma \in S_n: G_\sigma = G \} \cong Aut(G)$
-
+**Observación**: $\\{\sigma \in S_n: G_\sigma = G \\} \cong Aut(G)$
 
 
 ### Problema
 
-$G = (V, E)$, $V = \\{v_1, v_2, v_3, v_4\\}$, $E = \\{v_1 v_2, v_2 v_3, v_1 v_3, v_3 v_4 \\}$, $L_G = \\{12, 23, 13, 34\}$.
+$G = (V, E)$, $V = \\{v_1, v_2, v_3, v_4\\}$, $E = \\{v_1 v_2, v_2 v_3, v_1 v_3, v_3 v_4 \\}$, $L_G = \\{12, 23, 13, 34\\}$.
 
 Determinar $S = \\{\sigma \in S_n: G_\sigma = G \\}$.
 
