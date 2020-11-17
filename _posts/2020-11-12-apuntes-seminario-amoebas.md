@@ -37,7 +37,7 @@ $G = (V, E)$, $V = \\{v_1, v_2, v_3, v_4\\}$, $E = \\{v_1 v_2, v_2 v_3, v_1 v_3,
 
 Determinar $S = \\{\sigma \in S_n: G_\sigma = G \\}$.
 
-**PENDIENTE**
+![amoebas1]({{ site.url }}/assets/amoebas1.png)
 
 ### Conceptos a investigar
 
