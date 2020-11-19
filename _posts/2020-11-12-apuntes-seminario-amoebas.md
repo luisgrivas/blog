@@ -12,7 +12,7 @@ tags: [teoria-de-graficas]
 
 A cada gráfica $G$ le vamos a asociar un grupo $S_G$. 
 
-**Notación: **
+**Notación:**
 
 * $[n] = \\{1, 2, \ldots, n\\}$ y $[n, m] = \\{n. n+1, \ldots, m\\}$.
 * $S_n$ es el grupo simétrico sobre $n$ elementos. $\mid S_n \mid = n! $.

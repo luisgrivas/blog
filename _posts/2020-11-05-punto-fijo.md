@@ -2,7 +2,7 @@
 layout: post
 title:  "Problema de Punto fijo 1"
 date:   2020-11-05 10:42:07 -0600
-categories: analisis 
+categories: analisis-real 
 ---
 
 Siempre me han interesado los problemas de punto fijo. Este, aunque sencillo, no es la excepción.

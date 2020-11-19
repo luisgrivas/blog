@@ -3,7 +3,7 @@ layout: post
 title:  "Longitud de Arco"
 date:   2020-11-05 03:59:07 -0600
 categories: posts
-tags: [analisis, geometria-diferencial]
+tags: [analisis-real, geometria-diferencial]
 ---
 
 ## Funciones de variación acotada 

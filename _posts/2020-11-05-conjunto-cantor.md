@@ -4,7 +4,7 @@ title: "Temas relacionados con el conjunto de Cantor"
 date:   2020-11-06 13:38:00 -600
 last_modified_at: 2020-11-07 10:15:00
 category: post
-tags: [analisis, topologia]
+tags: [analisis-real, topologia]
 ---
 
 ## Conjunto de Cantor
@@ -19,7 +19,7 @@ Hagamos $P_0 = [0, 1]$. Sea $P_1$ el conjunto resultante al remover el tercio ce
 
 $$C = \bigcap_{k=1}^\infty P_n.$$
 
-Es importante recalcar que esta intersección es no vacía ya que $P_n \supset P_{n+1}$ y cada uno de estos es compacto[^1]. De la definición se observa que todo extremo de los intervalos de $P_n$ pertenecen al conjunto de Cantor.
+Esta intersección es no vacía ya que $P_n \supset P_{n+1}$ y cada uno de estos es compacto[^1]. De la definición se observa que todo extremo de los intervalos de $P_n$ pertenecen al conjunto de Cantor.
 
 Existe otra definición no obvia para el conjunto de Cantor. Definamos $T$ como el conjunto de números en $[0, 1]$   cuya expansión ternaria $(a_n)_3$ consiste únicamente de ceros y dos. Es decir
 
@@ -45,11 +45,11 @@ La discusión anterior nos permite concluir que $C$ se puede definir como el con
 
 ## Propiedades topológicas
 
-De la primera definición podemos constatar que $C$ es **cerrado**, pues es la interseccion de conjuntos cerrados. Otra propiedad interesante es que $C$ es **perfecto**, es decir, además se tiene que todos sus puntos son puntos límites. Si $x \in C$, entonces $x \in P_n$ para toda $n \in \mathbb{N}$. Denotemos por $I_{n, x}$ el intervalo de $P_n$ que contiene a $x$.  Observe que la longitud de $I_{n, x}$ es $l(I_{n, x}) = \frac{1}{3^n}$. Entonces, si $V$ es una vecindad de $x$, para $n$ suficientemente grande $I_{n, x} \subset V$. Luego, alguno de los puntos extremos de $I_{n, x}$ pertenece a $V \cap C\setminus \{ x\}$. Luego $x$ es un punto límite de $C$.  Resumamos lo anterior con el siguiente teorema. 
+De la primera definición podemos constatar que $C$ es **cerrado**, pues es la interseccion de conjuntos cerrados. Pero no solo eso, también $C$ es **perfecto**, es decir, todos sus puntos son puntos límites. Si $x \in C$, entonces $x \in P_n$ para toda $n \in \mathbb{N}$. Denotemos por $I_{n, x}$ el intervalo de $P_n$ que contiene a $x$.  Observe que la longitud de $I_{n, x}$ es $l(I_{n, x}) = \frac{1}{3^n}$. Entonces, si $V$ es una vecindad de $x$, para $n$ suficientemente grande $I_{n, x} \subset V$. Luego, alguno de los puntos extremos de $I_{n, x}$ pertenece a $V \cap C\setminus \{ x\}$. Se sigue que $x$ es un punto límite de $C$.  Resumamos lo anterior con el siguiente teorema. 
 
 **Teorema**. El conjunto de Cantor $C$ es perfecto. 
 
-Cabe preguntarse, ¿cómo es el interior de este conjunto? Observe que al definir cada $P_n$, removemos un intervalo de la forma $(\frac{3m + 1}{3^n}, \frac{3m +2}{3^n})$ donde $m$ es un entero no negativo. Si $V$ es una vecindad de $x \in C$, siempre podemos encontrar un intervalo  de la anterior forma que esté contenido en $V$. Esto muestra que ninguna vecindad de $x$ está contenida en $C$. Se duduce que el interior de $C$ es vacío. Esto muestra que el conjunto de cantor es **denso en ninguna parte** de $[0, 1]$. 
+Cabe preguntarse, ¿cómo es el interior de este conjunto? Observe que al definir cada $P_n$, removemos un intervalo de la forma $(\frac{3m + 1}{3^n}, \frac{3m +2}{3^n})$ donde $m$ es un entero no negativo. Si $V$ es una vecindad de $x \in C$, siempre podemos encontrar un intervalo  de la anterior forma que esté contenido en $V$. Esto muestra que ninguna vecindad de $x$ está contenida en $C$. Se duduce que el interior de $C$ es vacío. Como $C = [C]$ y $Int([C]) = \emptyset$ , este es **denso en ninguna parte** de $[0, 1]$. 
 
 
 
@@ -62,6 +62,8 @@ Supongamos $C$ fuera numerable. Sea $\{x_n\}$ una enumeración de $C$.
 Una segunda forma de demostrar que este conjunto es no numerable es establecer una correspondencia biyectiva entre $C$ y un conjunto no numerable. Por ejemplo, definamos el mapeo  $(a_n)_3 \mapsto (\frac{a_n}{2})_2$. Es claro que esta función es $1-1$ y sobre en el conjunto de todas las sucesiones con rango $\\{0, 1\\}$. 
 
 **Corolario**. El conjunto de cantor es no numerable.
+
+
 
 ## Función Ternaria de Cantor
 
@@ -93,7 +95,7 @@ Podemos construir conjuntos de parecidos al conjunto de Cantor de la siguiente m
 $$
 C_\alpha = \bigcap_{n}^\infty P_{n, \alpha}.
 $$
- 
+
 
 **DRAFT** 
 
