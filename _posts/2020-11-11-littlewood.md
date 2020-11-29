@@ -6,7 +6,7 @@ categories: posts
 tags: [analisis-real, medida]
 ---
 
-> "The extent of knowladge required is nothing like so great as is sometimes supposed. There are three principles, roughly expressible in the following terms: Every (measurable) set is nearly a finite sum of intervals; every function (of class $L^\lambda$) is nearly continuous; every convergent sequence of functions is nearly uniformly convergent. " (Littlewood, 1994).
+> "The extent of knowladge required is nothing like so great as is sometimes supposed. There are three principles, roughly expressible in the following terms: Every (measurable) set is nearly a finite sum of intervals; every function (of class $L^\lambda$) is nearly continuous; every convergent sequence of functions is nearly uniformly convergent. " (Littlewood, 1944).
 
 
 
@@ -14,17 +14,9 @@ tags: [analisis-real, medida]
 
 **Lema 1.** Sea $A$ un conjunto   sea $\epsilon > 0$. Entonces existe un conjunto abierto $O$ tal que $A \subset O$ y $m^\ast O \leq m^\ast A + \epsilon$. Existe un $G \in \mathcal{G}_\delta$ tal que $A \subset G$ y $m^\ast A = m^\ast G$. 
 
-*Demostración:*  Si $m^\ast A = \infty $, la conclusión se satisface inmediatamente. Suponga que $m^* A < \infty$. Entonces, existe una cubierta numerable de intervalos abiertos $(I_n)$ tal que $ \sum_n l(I_n) \leq  m^\ast A + \epsilon $. Luego, $O = \bigcup_n I_n $ satisface lo requerido. 
+*Demostración:*  Si $m^\ast A = \infty $, la conclusión se satisface inmediatamente. Suponga que $m^* A < \infty$. Entonces, existe una cubierta numerable de intervalos abiertos $\{I_n\}$ tal que $ \sum_n l(I_n) \leq  m^\ast A + \epsilon $. Luego, $O = \bigcup_n I_n $ satisface lo requerido. 
 
-Para cada $n\in \mathbb{N}$, sea $G_n$ un abierto tal que $m^\ast G_n \leq m^\ast A + \frac{1}{n}$ y $A \subset G_n$. Definamos $G = \bigcap_n G_n$. Claramente $m^\ast A \leq m^\ast G$.  Pero también $m^\ast G \leq  m^\ast A + \frac{1}{n} $, para toda $n\in \mathbb{N}$. Por tanto $m^\ast G = m^\ast A$.
-
-
-
-**Lema 2**. Sean $A$ y $B$ subconjuntos de $\mathbb{R}$. Si $B \subset A$ y $m^\ast B < \infty$, entonces $m^\ast(A \setminus B) \leq  m^\ast A - m^\ast B$. 
-
-*Demostración:* Observe que $m^\ast A \leq m^\ast (A \setminus B) + m^\ast(A \cap B) \leq m^\ast (A \setminus B ) + m^\ast B$, y la conclusión se sigue inmediatamente. 
-
-
+Para cada $n\in \mathbb{N}$, sea $G_n$ un abierto tal que $m^\ast G_n \leq m^\ast A + \frac{1}{n}$ y $A \subset G_n$. Definamos $G = \bigcap_n G_n$. Claramente $m^\ast A \leq m^\ast G$.  Pero también $m^\ast G \leq  m^\ast A + \frac{1}{n} $, para toda $n\in \mathbb{N}$. Por tanto $m^\ast G = m^\ast A$. $\blacksquare$
 
 **Teorema.** Sea $E$ un conjunto de números reales. Entonces las siguientes proposiciones son equivalentes:
 
@@ -38,17 +30,33 @@ Si $m^*E $ es finito, entonces las anteriores proposiciones son equivalentes a:
 
 6. Dado $\epsilon > 0$, existe una unión finita de intervalos abiertos $U$ tal que $m^*(U \Delta E) < \epsilon$.
 
-*Demostración:* Supongamos primero que  $m^\ast E < \infty$. 
+*Demostración:* 
 
-(1. $\Rightarrow$ 2.) Por el Lema 1, existe un abierto $O \supset E$ tal que $m^\star O < m^\star E + \epsilon$. Entonces $m^\ast (O \setminus E) = m^\ast O - m^\ast E  < \epsilon$. 
+Supongamos primero que  $m^\ast E < \infty$. 
 
-(2. $\Rightarrow$ 4.) Para cada $n\in \mathbb{N}$, sea $G_n$ abierto tal que $G_n \supset E$ y $m^\ast(G_n \setminus E) < \frac{1}{n}$. Definamos  $G = \bigcap_n G_n$. Luego, $G$ es $\mathcal{G_\delta}$ y $m^\ast (G \setminus E) \leq m^\ast G - m^\ast E = \lim_{n \to \infty } m^\ast G_n - m^\ast E < \lim_{n \to \infty} \frac{1}{n} = 0$. 
+(1. $\Rightarrow$ 2.) Por el Lema 1, existe un abierto $O \supset E$ tal que $m^\star O < m^\star E + \epsilon$. Como $E$ es medible,  $m^\ast O = m^\ast(O\setminus E) + m^\ast (O \cap E ) = m^\ast(O\setminus E ) + m^\ast(E) < m^\ast E + \epsilon$. Y como $m^\ast E < \infty$, se tiene que $m^\ast (O \setminus E ) < \epsilon$. 
 
-(4. $\Rightarrow 2.$) Sea $G = \bigcap_n G_n$, con $G_n$ abierto, tal que $E \subset G$ y $m^\ast (G \setminus E) = 0$. Sea $\epsilon > 0$. Entonces existe $k \in \mathbb{N}$ tal que $ G_k \supset E$ y $m^\ast (G_k \setminus E) < \epsilon$. 
+($2. \Rightarrow 6.$) Sea $\epsilon > 0$. Entonces existe $O$ abierto tal que $E \subset O$ y $m^\ast(O \setminus E ) < \epsilon/2$. Como $O$ es abierto, este se puede expresar como la unión numerable de intervalos abiertos ajenos dos a dos, es decir, $O = \bigcup_n (a_n, b_n)$ y $(a_k, b_k) \cap (a_j , b_j) = \emptyset$ si $j \neq k$. Como $O$ es medible y $O = (O\setminus E) \cup E$, entonces $m^\ast O \leq m^\ast(O\setminus E) + m^\ast E \leq \epsilon/2 + m^\ast E < \infty$. Por otro lado, $(a_k, b_k)$ es medible para toda $k\in \mathbb{N}$. De manera que $m^\ast O = \sum_n m^\ast (a_n, b_n)$. Entonces existe $r \in \mathbb{N}$ tal que $\sum_{n=r+1}^\infty m^\ast (a_n, b_n) < \epsilon/2$. Sea $U = \bigcup_{n=1}^r (a_n, b_n)$. Entonces 
+$$
+\begin{eqnarray}
+m^\ast(U \Delta E) &\leq& m^\ast(E \setminus U) + m^\ast(U\setminus E)\\
+&\leq& m^\ast(E \setminus U) + m^\ast(O\setminus E)\\
+&<& m^\ast(E \setminus U) + \epsilon/2\\
+&\leq& m^\ast(E \cap [\bigcup_{n=r+1}^\infty (a_n, b_n)]) + \epsilon/2\\
+&\leq& m^\ast(\bigcup_{n=r+1}^\infty(a_n, b_n)) + \epsilon/2\\
+&=& \sum_{n=r+1}^\infty m(a_n, b_n) + \epsilon/2\\
+&<& \epsilon.
+\end{eqnarray}
+$$
+ya que $U\setminus E \subset O\setminus E$ , $E \setminus U \subset E \cap [\bigcup_{n=r+1}^\infty (a_n, b_n)] $ y $E \cap [\bigcup_{n=r+1}^\infty (a_n, b_n)] \subset \bigcup_{n=r+1}^\infty (a_n, b_n)$.
 
-Ahora, suponga que $m^\ast E = \infty$.
+$(6. \Rightarrow 2.)$ 
 
-(1. $\Rightarrow$ 2.) Para cada $k\in \mathbb{N}$, sea  $E_k = E \cap (-k, k)$. Como $E_k$ es medible, existe un abierto $O_k$ tal que $E_k \subset O_k$ y $m^\ast (O_k \setminus E_k) < \frac{\epsilon}{2^k}$. Luego, $E \subset \bigcup_k O_k$ y 
+
+
+Suponga que $E$ es de medida exterior arbitraria.
+
+(1. $\Rightarrow$ 2.) Para cada $k\in \mathbb{N}$, sea  $E_k = E \cap (-k, k)$. Como $E_k$ es medible y es de medida finita, existe un abierto $O_k$ tal que $E_k \subset O_k$ y $m^\ast (O_k \setminus E_k) < \frac{\epsilon}{2^k}$. Hagamos $O = \bigcup_k O_k$. Entonces $O$ es un abierto que contiene a $E$.  
 
 
 $$
@@ -56,7 +64,7 @@ m^\ast(\bigcup_k O_k \setminus E) = m^\ast (\bigcup_k O_k \setminus \bigcup_k E_
 $$
 
 
-(2. $\Rightarrow$ 4.)
+(2. $\Rightarrow$ 4.) Para cada $n\in \mathbb{N}$, sea $O_n$ abierto tal que $O_n \supset E$ y $m^\ast(O_n \setminus E) < \frac{1}{n}$. Definamos  $G = \bigcap_n O_n$. Como  $G \setminus E \subset \bigcap_n^k O_n \setminus E \subset O_k \setminus E$, se tiene que $0 \leq m^\ast(G \setminus E) \leq m^\ast(\bigcap_n^kO_n \setminus E) \leq m^\ast(O_k \setminus E) < \frac{1}{k}$, para toda $k$ en $\mathbb{N}$.  Por tanto $m^\ast(G \setminus E) = 0.$
 
 
 
@@ -132,4 +140,22 @@ $$
 
 
 
-**DRAFT**
+
+
+---
+
+**Nota:** Lo siguiente es la demostración de (4. $\Rightarrow 2.$) No lo utilicé para demostrar el teorema. Lo dejo aquí como referencia. 
+
+Suponga que $m^\ast E < \infty$. Por el Lema 1, existe un abierto $O$ que contiene a $E$ tal que $m^\ast O \leq m E < \infty$.  Por hipótesis, existe  $G = \bigcap_n O_n$, con $O_n$ abierto, tal que $E \subset G$ y $m^\ast (G \setminus E) = 0$. Hagamos $G_k = \bigcap_n^k(O_n \cap O)$. La sucesión  $\{G_k\}$ es decreciente, todos sus elementos son medibles y $m^\ast G_1 \leq m^\ast O < \infty$. Se tiene entonces que $m^\ast (G \cap O) = \lim_{k \to \infty} G_k$.   
+
+Por otro lado, observe que $G_k \setminus E = [(G \cap O) \setminus E] \cup [G_k \setminus (G \cap O)]$, entonces
+$$
+\begin{eqnarray}
+m^\ast(G_k \setminus E) &\leq & m^\ast((G\cap O) \setminus E) + m^\ast(G_k \setminus (G\cap O))\\
+&= & m^\ast(G_k \setminus(G\cap O)) \\
+&=& m^\ast(G_k) - m^\ast(G \cap O),
+\end{eqnarray}
+$$
+ya que $m^\ast((G\cap O) \setminus E) = 0$, $G_k$ y $G \cap O$ son medibles y $m^\ast(G \cap O) \leq m^\ast O < \infty$. Se sigue que $0 \leq \lim_{k \to \infty } m^\ast(G_k \setminus E) \leq \lim_{k\to \infty} m^\ast G_k - m^\ast (G \cap O) = 0$. Por tanto $\lim_{k \to \infty } m^\ast(G_k \setminus E) = 0$. 
+
+Finalmente, sea $\epsilon > 0$. Entonces existe $r \in \mathbb{N}$ tal que $m^\ast(G_r \setminus E) < \epsilon$. Observe que $G_r $ es abierto y contiene a $E$. 
