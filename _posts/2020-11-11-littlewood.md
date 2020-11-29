@@ -37,6 +37,8 @@ Supongamos primero que  $m^\ast E < \infty$.
 (1. $\Rightarrow$ 2.) Por el Lema 1, existe un abierto $O \supset E$ tal que $m^\star O < m^\star E + \epsilon$. Como $E$ es medible,  $m^\ast O = m^\ast(O\setminus E) + m^\ast (O \cap E ) = m^\ast(O\setminus E ) + m^\ast(E) < m^\ast E + \epsilon$. Y como $m^\ast E < \infty$, se tiene que $m^\ast (O \setminus E ) < \epsilon$. 
 
 ($2. \Rightarrow 6.$) Sea $\epsilon > 0$. Entonces existe $O$ abierto tal que $E \subset O$ y $m^\ast(O \setminus E ) < \epsilon/2$. Como $O$ es abierto, este se puede expresar como la unión numerable de intervalos abiertos ajenos dos a dos, es decir, $O = \bigcup_n (a_n, b_n)$ y $(a_k, b_k) \cap (a_j , b_j) = \emptyset$ si $j \neq k$. Como $O$ es medible y $O = (O\setminus E) \cup E$, entonces $m^\ast O \leq m^\ast(O\setminus E) + m^\ast E \leq \epsilon/2 + m^\ast E < \infty$. Por otro lado, $(a_k, b_k)$ es medible para toda $k\in \mathbb{N}$. De manera que $m^\ast O = \sum_n m^\ast (a_n, b_n)$. Entonces existe $r \in \mathbb{N}$ tal que $\sum_{n=r+1}^\infty m^\ast (a_n, b_n) < \epsilon/2$. Sea $U = \bigcup_{n=1}^r (a_n, b_n)$. Entonces 
+
+
 $$
 \begin{eqnarray}
 m^\ast(U \Delta E) &\leq& m^\ast(E \setminus U) + m^\ast(U\setminus E)\\
@@ -45,7 +47,7 @@ m^\ast(U \Delta E) &\leq& m^\ast(E \setminus U) + m^\ast(U\setminus E)\\
 &\leq& m^\ast(E \cap [\bigcup_{n=r+1}^\infty (a_n, b_n)]) + \epsilon/2\\
 &\leq& m^\ast(\bigcup_{n=r+1}^\infty(a_n, b_n)) + \epsilon/2\\
 &=& \sum_{n=r+1}^\infty m(a_n, b_n) + \epsilon/2\\
-&<& \epsilon.
+&<& \epsilon
 \end{eqnarray}
 $$
 ya que $U\setminus E \subset O\setminus E$ , $E \setminus U \subset E \cap [\bigcup_{n=r+1}^\infty (a_n, b_n)] $ y $E \cap [\bigcup_{n=r+1}^\infty (a_n, b_n)] \subset \bigcup_{n=r+1}^\infty (a_n, b_n)$.
