@@ -1,0 +1,51 @@
+---
+layout: post
+title: "Todo espacio métrico se puede completar"
+date: 2020-11-29 15:24:00
+categories: posts
+tags: analisis
+---
+
+
+
+### Sucesiones y convergencia
+
+La noción de convergencia en un espacio métrico se puede definir de manera equivalente al caso de convergencia en los reales con la métrica euclidiana. 
+
+Sea $\langle x_n\rangle$ una sucesión en un espacio métrico $(X, \rho)$. Decimos que que $\langle x_n \rangle$ **converge** a un elemento $x$ en $X$, si dado $\epsilon > 0$, existe un $N$ en $\mathbb{N}$ tal que $\rho(x_n, x) < \epsilon$ si $n \geq N$. En términos de abiertos, decimos que $\langle x_n \rangle$ converge a $x$ si toda vecindad de $x$ contiene a todos salvo un número finito de términos de $\langle x_n \rangle$. Si $\langle x_n \rangle$ converge a $x$, escribimos $x_n \to x$ o $\lim x_n = x$. 
+
+ **EJEMPLOS**
+
+
+
+### Sucesiones de Cauchy
+
+![cauchy](https://upload.wikimedia.org/wikipedia/commons/6/62/Cauchy_sequence_illustration.svg)
+
+Una sucesión $\langle x_n \rangle$ decimos que es **sucesión de Cauchy** si dado $\epsilon > 0$ existe $N$ en $\mathbb{N}$ tal que $\rho(x_n, x_m) < \epsilon$ si $n, n \geq N$. Las sucesiones de Cauchy se *ven* como en la figura de arriba. Esta gráfica pudiera inducir la idea de que toda sucesión de Cauchy converge. A fin de cuentas, la distancia entre los términos de la sucesión se hace cada vez más pequeña. Sin embargo, existen espacios métricos con **sucesiones de Cauchy que no convergen**. 
+
+Consideremos el espacio métrico $(\mathbb{Q}, \rho)$, donde $\rho$ es la métrica euclidiana. Para toda $n  $ en $ \mathbb{N}$, sea $x_n$ un racional tal que $2 - \frac{1}{n} < (x_n)^2 < 2$.  De esta desigualdad se sigue que, para $n, m$ en $\mathbb{N}$,
+$$
+-\frac{1}{n} < (x_n + x_m)(x_n - x_m) < \frac{1}{m}.
+$$
+Así que, si $n, m \to \infty$, entonces $(x_n + x_m)(x_n - x_m) \to 0$. Ahora bien, también se tiene que $x_k > 1$ para toda $k $ en $\mathbb{N}$, entonces $x_n + x_m > 1$. Esto implica que $(x_n - x_m) \to 0$, si $n, m \to \infty$. Por tanto $\langle x_n \rangle$ es una sucesión de Cauchy. 
+
+Si $\langle x_n \rangle$  converge a $x$ en $\mathbb{Q}$, entonces $\langle (x_n)^2 \rangle$ converge a $x^2$ que por construcción satisface $x^2 = 2$. Pero como sabemos, esta ecuación no tiene soluciones en $\mathbb{Q}$. Por tanto $\langle x_n \rangle$ no converge. Con este ejemplo podemos constatar que $\mathbb{Q}$ tiene agujeros. 
+
+Por otro lado, la desigualdad del tríangulo implica que toda sucesión convergente es sucesión de Cauchy. Sea $x_n \to x$ y sea $\epsilon > 0$. Entonces existe $N$ en $\mathbb{N}$, tal que $\rho(x_n, x) < \epsilon/2$. Luego, si $n, m \geq N$, se tiene que 
+$$
+\rho(x_n, x_n) \leq \rho(x_n, x) + \rho(x, x_m) < \epsilon.
+$$
+
+
+### Completitud
+
+El ejemplo anterior nos hace ver que los espacio métricos cuyas sucesiones de Cauchy convergen son especiales. Cuando esto ocurre diremos que el espacio métrico en cuestión es **completo.** Por ejemplo, en cursos básicos de análisis se demuestra que los reales son un espacio métrico completo. 
+
+Si tenemos un espacio métrico incompleto, cabe preguntarse ¿existe alguna forma de *completarlo*? El siguiente teorema contesta esta pregunta.
+
+**Teorema.** Si $(X, \rho)$ es un espacio métrico incompleto, entonces es posible encontrar un espacio métrico completo $X^\ast$ en el cual $X$ es embebido isométricamente como conjunto denso. Si $X$ está contenido en un espacio métrico completo $Y$, entonces $X^\ast$ es isométrico con la clausura de $X$ en $Y$. 
+
+Empezaremos demostrando los siguientes lemas. 
+
+**Lema 1.** Si $\langle x_n \rangle$ y $\langle y_n \rangle$ son sucesiones de Cauchy en un espacio métrico $X$, entonces $\rho(x_n, y_n)$ converge. 
