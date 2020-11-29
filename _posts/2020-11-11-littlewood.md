@@ -50,6 +50,8 @@ m^\ast(U \Delta E) &\leq& m^\ast(E \setminus U) + m^\ast(U\setminus E)\\
 &<& \epsilon
 \end{eqnarray}
 $$
+
+
 ya que $U\setminus E \subset O\setminus E$ , $E \setminus U \subset E \cap [\bigcup_{n=r+1}^\infty (a_n, b_n)] $ y $E \cap [\bigcup_{n=r+1}^\infty (a_n, b_n)] \subset \bigcup_{n=r+1}^\infty (a_n, b_n)$.
 
 $(6. \Rightarrow 2.)$ 
