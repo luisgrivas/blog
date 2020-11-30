@@ -104,6 +104,8 @@ $$
 
 
 Como $C_\alpha$ es la intersección de conjuntos cerrados, $C_\alpha$ es cerrado. Además, la medida de $P_{n, \alpha}$ es $ 1 - \frac{\alpha}{3}\sum_{k=0}^n (\frac{2}{3})^k$. Entonces
+
+
 $$
 \begin{eqnarray}
 m C_\alpha &=& \lim_{n \to \infty} m P_{n, \alpha} \\
@@ -112,6 +114,8 @@ m C_\alpha &=& \lim_{n \to \infty} m P_{n, \alpha} \\
 &=& 1 - \alpha.
 \end{eqnarray}
 $$
+
+
 A los conjuntos $C_\alpha$ se les conoce como **conjuntos de Cantor generalizados.**
 
 **DRAFT** 

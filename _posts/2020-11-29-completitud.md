@@ -44,9 +44,9 @@ Por otro lado, la desigualdad del tríangulo implica que toda sucesión converge
 $$
 \rho(x_n, x_n) \leq \rho(x_n, x) + \rho(x, x_m) < \epsilon.
 $$
-Cabe preguntarse si la condición de Cauchy (esto es, ser suceción de Cauchy) se preserva bajo  funciones continuas. **EJEMPLO QUE MUESTRE QUE ESTO NO SE CUMPLE**
+Cabe preguntarse si la condición de Cauchy (esto es, ser suceción de Cauchy) se preserva bajo  funciones continuas.  Sea $f: (0, 1] \rightarrow \mathbb{R}$ definida como $f(x) = \frac{1}{x}$ para toda $x \in (0, 1]$. Esta función es continua en $(0, 1]$. Consideremos la sucesión $\langle \frac{1}{n} \rangle$ en $(0, 1]$. Claramente esta es una sucesión de Cauchy. Sin embargo $\langle f(\frac{1}{n}) \rangle = \langle n \rangle $ no es sucesión de Cauchy en $\mathbb{R}$. 
 
-Sea $f: X \rightarrow Y$ una función uniformemente continua en un espacio métrico $X$ en un espacio métrico $Y$. Sea $\langle x_n \rangle$ una sucesión de Cauchy y sea $\epsilon > 0$. Como $f$ es uniformemente continua, existe un $\delta > 0$ tal que $ \sigma(f(x), f(y)) < \epsilon$ si $\rho(x, y) < \delta$. Como $\langle x_n \rangle$ es sucesión de Cauchy, existe $N $ en $\mathbb{N}$ tal que $\rho(x_n, x_m) < \delta$ si $m, n \geq N$. Se sigue que $\sigma(f(x_n), f(x_m)) < \epsilon$ si $n, m \geq N$. Por tanto $\langle f(x_n) \rangle$ es de Cauchy en  $Y$.
+El anterior ejemplo muestra que la condición de Cauchy no se preserva bajo funciones continuas. No obstante, podemos encontrar condiciones con las que esto si se cumple.  Sea $f: X \rightarrow Y$ una función **uniformemente continua** en un espacio métrico $X$ en un espacio métrico $Y$. Sea $\langle x_n \rangle$ una sucesión de Cauchy y sea $\epsilon > 0$. Como $f$ es uniformemente continua, existe un $\delta > 0$ tal que $ \sigma(f(x), f(y)) < \epsilon$ si $\rho(x, y) < \delta$. Como $\langle x_n \rangle$ es sucesión de Cauchy, existe $N $ en $\mathbb{N}$ tal que $\rho(x_n, x_m) < \delta$ si $m, n \geq N$. Se sigue que $\sigma(f(x_n), f(x_m)) < \epsilon$ si $n, m \geq N$. Por tanto $\langle f(x_n) \rangle$ es de Cauchy en  $Y$.
 
 
 
