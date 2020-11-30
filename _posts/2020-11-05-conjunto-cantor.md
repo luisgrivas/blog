@@ -88,19 +88,35 @@ En teoría de la medida se conoce el siguiente teorema.
 El conjunto de Cantor muestra que el converso no es cierto. Este conjunto es no numerable y sin embargo
 
 
+
 $$
 m C = \lim_{n \to \infty} m P_n = \lim_{n \to \infty} \left(\frac{2}{3}\right)^n = 0.
 $$
+
+
 Podemos construir conjuntos de parecidos al conjunto de Cantor de la siguiente manera. Sea $0 < \alpha < 1$. Generemos los conjuntos $P_{n, \alpha}$ de la misma manera como con el conjunto de Cantor pero removiendo los intervalos centrales con longitud $\frac{\alpha}{3^n}$.  Definamos al conjunto 
+
+
 $$
 C_\alpha = \bigcap_{n}^\infty P_{n, \alpha}.
 $$
 
 
+
+Como $C_\alpha$ es la intersección de conjuntos cerrados, $C_\alpha$ es cerrado. Además, la medida de $P_{n, \alpha}$ es $ 1 - \frac{\alpha}{3}\sum_{k=0}^n (\frac{2}{3})^k$. Entonces
+$$
+\begin{eqnarray}
+m C_\alpha &=& \lim_{n \to \infty} m P_{n, \alpha} \\
+&=& \lim_{n \to \infty} \left( 1 - \frac{\alpha}{3}\sum_{k=0}^n \left(\frac{2}{3}\right)^k \right)\\
+&=& 1 - \frac{\alpha}{3} \cdot \frac{1}{1 - \frac{2}{3}}\\
+&=& 1 - \alpha.
+\end{eqnarray}
+$$
+A los conjuntos $C_\alpha$ se les conoce como **conjuntos de Cantor generalizados.**
+
 **DRAFT** 
 
 - [ ] Demostrar cosas de funcion ternaria.
-- [ ]  Demostrar que la medida de $C_\alpha = 1 - \alpha$.
 - [ ] Correccion de demostracion ternaria
 
 
