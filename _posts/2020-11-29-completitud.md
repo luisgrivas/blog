@@ -18,11 +18,19 @@ Sea $\langle x_n\rangle$ una sucesión en un espacio métrico $(X, \rho)$. Decim
 
 
 
+### Sucesiones y continuidad
+
+Las funciones continuas y las sucesiones convergentes se *llevan bien.* Sea $f: X \rightarrow Y$ una función de un espacio métrico $X$ en un espacio métrico $Y$. Suponga que $f $ es continua en $p$. Sea $\langle x_n \rangle$ una sucesión en $X$ que converge a $p$ y sea $\epsilon > 0$. Como $f$ es contninua en $p$, existe un $\delta > 0$ tal que $\sigma(f(x) , f(p)) < \epsilon$ si $\rho(x, p) < \delta$. Como $x_n \to p$, existe $N$ en $\mathbb{N}$ tal que $\rho(x_n, p) < \delta$ si $n \geq N$. Luego, $\sigma(f(x_n), f(p)) < \epsilon$ si $n \geq N$. Esto implica que  $f(x_n) \to f(p)$. 
+
+Lo anterior puede resumirse como "*las funciones continuas preservan la convergencia*". El converso también es cierto. Suponga que $f$ es discontinua en $p$. Entonces existe $\epsilon > 0$ tal que para toda $n$ en $\mathbb{N}$, existe $x_n$ tal que $\rho(p, x_n) < \frac{1}{n}$ y  $\sigma(f(x), f(p) ) \geq \epsilon$. Se sigue que $x_n \to p$ pero $f(x_n)$ no converge a $f(p)$. Por contraposición se obtiene lo deseado.
+
+
+
 ### Sucesiones de Cauchy
 
-![cauchy](https://upload.wikimedia.org/wikipedia/commons/6/62/Cauchy_sequence_illustration.svg)
+Una sucesión $\langle x_n \rangle$ decimos que es **sucesión de Cauchy** si dado $\epsilon > 0$ existe $N$ en $\mathbb{N}$ tal que $\rho(x_n, x_m) < \epsilon$ si $n, n \geq N$. Las sucesiones de Cauchy se *ven* como en la figura de abajo. Esta gráfica pudiera inducir la idea de que toda sucesión de Cauchy converge. A fin de cuentas, la distancia entre los términos de la sucesión se hace cada vez más pequeña. Sin embargo, existen espacios métricos con **sucesiones de Cauchy que no convergen**. 
 
-Una sucesión $\langle x_n \rangle$ decimos que es **sucesión de Cauchy** si dado $\epsilon > 0$ existe $N$ en $\mathbb{N}$ tal que $\rho(x_n, x_m) < \epsilon$ si $n, n \geq N$. Las sucesiones de Cauchy se *ven* como en la figura de arriba. Esta gráfica pudiera inducir la idea de que toda sucesión de Cauchy converge. A fin de cuentas, la distancia entre los términos de la sucesión se hace cada vez más pequeña. Sin embargo, existen espacios métricos con **sucesiones de Cauchy que no convergen**. 
+  ![cauchy](https://upload.wikimedia.org/wikipedia/commons/6/62/Cauchy_sequence_illustration.svg)
 
 Consideremos el espacio métrico $(\mathbb{Q}, \rho)$, donde $\rho$ es la métrica euclidiana. Para toda $n  $ en $ \mathbb{N}$, sea $x_n$ un racional tal que $2 - \frac{1}{n} < (x_n)^2 < 2$.  De esta desigualdad se sigue que, para $n, m$ en $\mathbb{N}$,
 $$
@@ -36,6 +44,10 @@ Por otro lado, la desigualdad del tríangulo implica que toda sucesión converge
 $$
 \rho(x_n, x_n) \leq \rho(x_n, x) + \rho(x, x_m) < \epsilon.
 $$
+Cabe preguntarse si la condición de Cauchy (esto es, ser suceción de Cauchy) se preserva bajo  funciones continuas. **EJEMPLO QUE MUESTRE QUE ESTO NO SE CUMPLE**
+
+Sea $f: X \rightarrow Y$ una función uniformemente continua en un espacio métrico $X$ en un espacio métrico $Y$. Sea $\langle x_n \rangle$ una sucesión de Cauchy y sea $\epsilon > 0$. Como $f$ es uniformemente continua, existe un $\delta > 0$ tal que $ \sigma(f(x), f(y)) < \epsilon$ si $\rho(x, y) < \delta$. Como $\langle x_n \rangle$ es sucesión de Cauchy, existe $N $ en $\mathbb{N}$ tal que $\rho(x_n, x_m) < \delta$ si $m, n \geq N$. Se sigue que $\sigma(f(x_n), f(x_m)) < \epsilon$ si $n, m \geq N$. Por tanto $\langle f(x_n) \rangle$ es de Cauchy en  $Y$.
+
 
 
 ### Completitud
@@ -60,8 +72,6 @@ $$
 
 Entonces $\rho(x_n, y_n) - \rho(x_m, y_m) \leq \rho(x_n, x_m) + \rho(y_n, y_m)$. De manera análoga se llega a que $\rho(x_m, y_m) - \rho(x_n, y_n) \leq \rho(x_n, x_m) + \rho(y_n, y_m)$. Por tanto $\lvert \rho(x_n, y_n) - \rho(x_m, y_m) \lvert \leq \rho(x_n, x_m) + \rho(y_n, y_m)$ Por hipótesis, $\rho(x_n, x_m) \to 0$  y $\rho(y_n, y_m) \to 0$, cuando $n, m \to \infty$. Entonces $\lvert \rho(x_n, y_n) - \rho(x_m, y_m)\lvert \to 0$ cuando $n, m \to \infty$. Entonces la sucesión $\rho(x_n, y_n)$ es sucesión de Cauchy en $\mathbb{R}$ y por tanto converge. $\blacksquare$
 
-
-
 **Lema 2.** El conjunto de todas las sucesiones de Cauchy de un espacio métrico $X$ forma un espacio pseudométrico, si $\rho^\ast(\langle x_n \rangle, \langle y_n \rangle) = \lim \rho(x_n, y_n)$.
 
 *Demostración.* Sean $\langle x_n \rangle, \langle y_n \rangle$ y $\langle z_n \rangle$ sucesiones de Cauchy en $X$. Demostraremos que $\rho^\ast$ es una pseudométrica. 
@@ -79,9 +89,7 @@ $$
 $$
 
 
-Decimos que $\rho^\ast$ es una pseudométrica, ya que las sucesiones $\langle x_n \rangle $ y $\langle x_{n+k}\rangle$, $k$ en $\mathbb{N}$ son distintas pero satisfacen que $\rho^\ast(\langle x_n \rangle, \langle x_{n+k}\rangle) = 0$. $\blacksquare$
-
-
+Decimos que $\rho^\ast$ es una pseudométrica, ya que las sucesiones $\langle x_n \rangle $ y $\langle x_{n+k}\rangle$, $k$ en $\mathbb{N}$ son distintas pero satisfacen  $\rho^\ast(\langle x_n \rangle, \langle x_{n+k}\rangle) = 0$. $\blacksquare$
 
 **Lema 3.** La relación $\langle x_n \rangle \sim \langle y_n \rangle$ si y solo si $\rho^\ast(\langle x_n \rangle , \langle y_n \rangle) = 0$ es una relación de equivalencia en el conjunto de todas las sucesiones de Cauchy de $X$. El conjunto $X^\ast$ de todas las clases de equivalencia generadas forma un espacio métrico. Además, $X$ está isométricamente embebido en $X^\ast$.
 
@@ -100,9 +108,16 @@ $$
 $$
 
 
-Por tanto $\rho^\ast(\langle x_n \rangle, \langle y_n \rangle) \leq \rho^\ast(\langle x_n^\prime \rangle, \langle y^\prime_n \rangle)$. De manera similar se deduce que $\rho^\ast(\langle x_n^\prime \rangle, \langle y_n^\prime \rangle) \leq \rho^\ast(\langle x_n \rangle, \langle y_n \rangle)$.  Con lo anterior, hemos demostrado que el valor de $\rho^\ast$ es independiente de los representantes de las clases de equivalencia involucradas. En resumen, la función $\sigma(x^\ast, y^\ast) = \rho^\ast(\langle x_n \rangle, \langle y_n \rangle)$, donde $\langle x_n \rangle $ y $ \langle y_n \rangle$ son representantes de las clases de equivalencia $x^\ast$ y $y^\ast$ respectivamente, está bien definida.
+Por tanto $\rho^\ast(\langle x_n \rangle, \langle y_n \rangle) \leq \rho^\ast(\langle x_n^\prime \rangle, \langle y^\prime_n \rangle)$. De manera similar se deduce que $\rho^\ast(\langle x_n^\prime \rangle, \langle y_n^\prime \rangle) \leq \rho^\ast(\langle x_n \rangle, \langle y_n \rangle)$.  Con lo anterior, hemos demostrado que el valor de $\rho^\ast$ es independiente de los representantes de las clases de equivalencia involucradas. En resumen, la función $\sigma(x^\ast, y^\ast) = \rho^\ast(\langle x_n \rangle, \langle y_n \rangle)$, donde $\langle x_n \rangle $ y $ \langle y_n \rangle$ son representantes de las clases de equivalencia $x^\ast$ y $y^\ast$ respectivamente, está bien definida. Y por todo lo anterior, se deduce que $(X^\ast, \sigma)$ es un espacio métrico. 
 
-Por todo lo anterior, se deduce que $(X^\ast, \sigma)$ es un espacio métrico. 
+Finalmente, identifiquemos a todo elemento $x $ en $ X$ con la sucesión de Cauchy $\langle x  \rangle$. Observe que si $x \neq y$ , claramente $\langle x  \rangle \neq \langle y  \rangle $. Más aún, $\rho^\ast(\langle x  \rangle, \langle y  \rangle ) = \lim \rho(x , y ) = \rho(x, y) > 0$. De manera que $\langle x_n \rangle $ y $\langle y_n \rangle$ están en distintas clases de equivalencia. Hemos mostrado que el mapeo $x \mapsto \langle x \rangle \mapsto x^\ast$ es inyectivo.
 
-Finalmente, sea $f: X \rightarrow X^\ast$
+Además, este mapeo es una isométrico, ya que $\rho(x, y) = \lim \rho(x, y)  = \rho^\ast(\langle x \rangle, \langle y \rangle) = \sigma(x^\ast, y^\ast)$. $\blacksquare$
 
+**Lema 4**. El espacio métrico $(X^\ast, \sigma)$ es completo. 
+
+*Demostración.* 
+
+
+
+**DRAFT**  
