@@ -56,7 +56,7 @@ El ejemplo anterior nos hace ver que los espacio métricos cuyas sucesiones de C
 
 Si tenemos un espacio métrico incompleto, cabe preguntarse ¿existe alguna forma de *completarlo*? El siguiente teorema contesta esta pregunta.
 
-**Teorema.** Si $(X, \rho)$ es un espacio métrico incompleto, entonces es posible encontrar un espacio métrico completo $X^\ast$ en el cual $X$ es embebido isométricamente como conjunto denso. Si $X$ está contenido en un espacio métrico completo $Y$, entonces $X^\ast$ es isométrico con la clausura de $X$ en $Y$. 
+**Teorema.** Si $(X, \rho)$ es un espacio métrico incompleto, entonces es posible encontrar un espacio métrico completo $X^\ast$ en el cual $X$ es embebido isométricamente como conjunto denso. Si $X$ está contenido en un espacio métrico completo $Y$, entonces $X^\ast$ es isométrico con la cerradura de $X$ en $Y$. 
 
 Empezaremos demostrando los siguientes lemas. 
 
@@ -116,8 +116,29 @@ Además, este mapeo es una isométrico, ya que $\rho(x, y) = \lim \rho(x, y)  = 
 
 **Lema 4**. El espacio métrico $(X^\ast, \sigma)$ es completo. 
 
-*Demostración.* 
+*Demostración.* Sea $\langle x_k^\ast \rangle$ una sucesión de Cauchy en $X^\ast$. Sea $\langle x_{k,  n} \rangle$ una sucesión en $X$ tal que $\langle x_{k, n} \rangle \in x_k^\ast$, para toda $k \in \mathbb{N}$. Para toda $k$, $\langle x_{k, n} \rangle$ es sucesión de Cauchy en $X$. Entonces, existe $N_k \in \mathbb{N}$ tal que $\rho(x_{k, N_k}, x_{k, n}) < 2^{-k}$ si $n \geq N_k$. Consideremos la sucesión $\langle x_{k} \rangle $ con $x_k = x_{k, N_k}$ para toda $k \in \mathbb{N}$. Observe que
 
 
+$$
+\begin{eqnarray}
+\rho(x_k, x_m) &=& \rho(x_{k, N_k}, x_{m, N_m}) \\
+&\leq& \rho(x_{k, N_k}, x_{k, j}) + \rho(x_{k, j}, x_{m, N_m})\\
+&\leq& \rho(x_{k, N_k}, x_{k, j}) + \rho(x_{k, j}, x_{m, j}) + \rho(x_{m,j}, x_{m, N_m})\\
+&<& 2^{-k} + \rho(x_{k, j}, x_{m, j}) + 2^{-m},
+\end{eqnarray}
+$$
 
-**DRAFT**  
+
+si $j \geq \max\{N_k, N_m\}$. Y como $\rho^\ast(x_k^\ast, x_m^\ast) \to 0$ cuando $k, m \to \infty$, se tiene que $\rho(x_{k, j}, x_{m, j}) \to 0$ cuando $k, m \to \infty$. Hemos demostrado que la sucesión $\langle x_k \rangle $ es sucesión de Cauchy. 
+
+Sea $x^\ast $ la clase de equivalencia de $\langle x_k \rangle$. Tenemos entonces que 
+$$
+\begin{eqnarray}
+\rho^\ast(x_k^\ast, x^\ast) &=& \lim_{n\to\infty} \rho(x_{k, n}, x_n)\\
+&=& \lim_{n \to \infty} \rho(x_{k, n}, x_{n, N_n}) \\
+&\leq& \lim_{n \to \infty} (\rho(x_{k, n}, x_{k, N_k}) + \rho(x_{k, N_k}, x_{n, N_n}))\\
+& < & 2^{-k} + \rho(x_{k, N_k}, x_{n, N_n})).
+\end{eqnarray}
+$$
+Bajo el mismo argumento anterior, $\rho(x_{k, N_k}, x_{n, N_n})) \to 0$ , cuando $n, k \to \infty$. Por tanto $x_k^\ast \to x^\ast$ y  la demostración está completa. $\blacksquare$
+
