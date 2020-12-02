@@ -135,6 +135,8 @@ $$
 si $j \geq \max\{N_k, N_m\}$. Y como $\rho^\ast(x_k^\ast, x_m^\ast) \to 0$ cuando $k, m \to \infty$, se tiene que $\rho(x_{k, j}, x_{m, j}) \to 0$ cuando $k, m \to \infty$. Hemos demostrado que la sucesión $\langle x_k \rangle $ es sucesión de Cauchy. 
 
 Sea $x^\ast $ la clase de equivalencia de $\langle x_k \rangle$. Tenemos entonces que 
+
+
 $$
 \begin{eqnarray}
 \rho^\ast(x_k^\ast, x^\ast) &=& \lim_{n\to\infty} \rho(x_{k, n}, x_n)\\
@@ -143,6 +145,8 @@ $$
 & < & 2^{-k} + \rho(x_{k, N_k}, x_{n, N_n})).
 \end{eqnarray}
 $$
+
+
 Bajo el mismo argumento anterior, $\rho(x_{k, N_k}, x_{n, N_n})) \to 0$ , cuando $n, k \to \infty$. Por tanto $x_k^\ast \to x^\ast$ y  la demostración está completa. :metal:
 
-[ ] Falta demostrar cerradura. 
+[  ]: Falta demostrar cerradura. 
