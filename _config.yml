@@ -32,6 +32,7 @@ theme: minima
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jemoji
 
 # encoding: utf-8
 # Exclude from processing.
