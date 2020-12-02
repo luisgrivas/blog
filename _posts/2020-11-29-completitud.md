@@ -30,7 +30,11 @@ Lo anterior puede resumirse como "*las funciones continuas preservan la converge
 
 Una sucesión $\langle x_n \rangle$ decimos que es **sucesión de Cauchy** si dado $\epsilon > 0$ existe $N$ en $\mathbb{N}$ tal que $\rho(x_n, x_m) < \epsilon$ si $n, n \geq N$. Las sucesiones de Cauchy se *ven* como en la figura de abajo. Esta gráfica pudiera inducir la idea de que toda sucesión de Cauchy converge. A fin de cuentas, la distancia entre los términos de la sucesión se hace cada vez más pequeña. Sin embargo, existen espacios métricos con **sucesiones de Cauchy que no convergen**. 
 
+
+
   ![cauchy](https://upload.wikimedia.org/wikipedia/commons/6/62/Cauchy_sequence_illustration.svg)
+
+
 
 Consideremos el espacio métrico $(\mathbb{Q}, \rho)$, donde $\rho$ es la métrica euclidiana. Para toda $n  $ en $ \mathbb{N}$, sea $x_n$ un racional tal que $2 - \frac{1}{n} < (x_n)^2 < 2$.  De esta desigualdad se sigue que, para $n, m$ en $\mathbb{N}$,
 $$
@@ -56,7 +60,7 @@ El ejemplo anterior nos hace ver que los espacio métricos cuyas sucesiones de C
 
 Si tenemos un espacio métrico incompleto, cabe preguntarse ¿existe alguna forma de *completarlo*? El siguiente teorema contesta esta pregunta.
 
-**Teorema.** Si $(X, \rho)$ es un espacio métrico incompleto, entonces es posible encontrar un espacio métrico completo $X^\ast$ en el cual $X$ es embebido isométricamente como conjunto denso. Si $X$ está contenido en un espacio métrico completo $Y$, entonces $X^\ast$ es isométrico con la cerradura de $X$ en $Y$. 
+**Teorema.** Si $(X, \rho)$ es un espacio métrico incompleto, entonces es posible encontrar un espacio métrico completo $X^\ast$ en el cual $X$ es sumergido isométricamente como conjunto denso. Si $X$ está contenido en un espacio métrico completo $Y$, entonces $X^\ast$ es isométrico con la cerradura de $X$ en $Y$. 
 
 Empezaremos demostrando los siguientes lemas. 
 
@@ -91,7 +95,7 @@ $$
 
 Decimos que $\rho^\ast$ es una pseudométrica, ya que las sucesiones $\langle x_n \rangle $ y $\langle x_{n+k}\rangle$, $k$ en $\mathbb{N}$ son distintas pero satisfacen  $\rho^\ast(\langle x_n \rangle, \langle x_{n+k}\rangle) = 0$. $\blacksquare$
 
-**Lema 3.** La relación $\langle x_n \rangle \sim \langle y_n \rangle$ si y solo si $\rho^\ast(\langle x_n \rangle , \langle y_n \rangle) = 0$ es una relación de equivalencia en el conjunto de todas las sucesiones de Cauchy de $X$. El conjunto $X^\ast$ de todas las clases de equivalencia generadas forma un espacio métrico. Además, $X$ está isométricamente embebido en $X^\ast$.
+**Lema 3.** La relación $\langle x_n \rangle \sim \langle y_n \rangle$ si y solo si $\rho^\ast(\langle x_n \rangle , \langle y_n \rangle) = 0$ es una relación de equivalencia en el conjunto de todas las sucesiones de Cauchy de $X$. El conjunto $X^\ast$ de todas las clases de equivalencia generadas forma un espacio métrico. Además, $X$ está isométricamente sumergido en $X^\ast$ como conjunto denso.
 
 *Demostración.* Por el Lema 2, $\sim$ es reflexiva y simétrica.  Sean $\langle x_n \rangle, \langle y_n \rangle$ y $\langle z_n \rangle$ sucesiones de Cauchy en $X$ tales que $\langle x_n \rangle \sim \langle y_n \rangle$ y $\langle y_n \rangle \sim \langle z_n \rangle$. Por la desigualdad del tríangulo se sigue que $0 \leq \rho^\ast(\langle x_n \rangle, \langle z_n \rangle) \leq \rho^\ast(\langle x_n \rangle, \langle y_n \rangle)+ \rho^\ast(\langle y_n \rangle, \langle z_n \rangle) = 0. $ Por tanto $\rho^\ast(\langle x_n \rangle, \langle z_n \rangle) = 0$. Se sigue que $\sim$ es una relación de equivalencia en el conjunto de todas las sucesiones de Cauchy en $X$.
 
@@ -110,14 +114,13 @@ $$
 
 Por tanto $\rho^\ast(\langle x_n \rangle, \langle y_n \rangle) \leq \rho^\ast(\langle x_n^\prime \rangle, \langle y^\prime_n \rangle)$. De manera similar se deduce que $\rho^\ast(\langle x_n^\prime \rangle, \langle y_n^\prime \rangle) \leq \rho^\ast(\langle x_n \rangle, \langle y_n \rangle)$.  Con lo anterior, hemos demostrado que el valor de $\rho^\ast$ es independiente de los representantes de las clases de equivalencia involucradas. En resumen, la función $\sigma(x^\ast, y^\ast) = \rho^\ast(\langle x_n \rangle, \langle y_n \rangle)$, donde $\langle x_n \rangle $ y $ \langle y_n \rangle$ son representantes de las clases de equivalencia $x^\ast$ y $y^\ast$ respectivamente, está bien definida. Y por todo lo anterior, se deduce que $(X^\ast, \sigma)$ es un espacio métrico. 
 
-Finalmente, identifiquemos a todo elemento $x $ en $ X$ con la sucesión de Cauchy $\langle x  \rangle$. Observe que si $x \neq y$ , claramente $\langle x  \rangle \neq \langle y  \rangle $. Más aún, $\rho^\ast(\langle x  \rangle, \langle y  \rangle ) = \lim \rho(x , y ) = \rho(x, y) > 0$. De manera que $\langle x_n \rangle $ y $\langle y_n \rangle$ están en distintas clases de equivalencia. Hemos mostrado que el mapeo $x \mapsto \langle x \rangle \mapsto x^\ast$ es inyectivo.
+Finalmente, identifiquemos a todo elemento $x $ en $ X$ con la sucesión de Cauchy $\langle x  \rangle$. Sea $\phi: X \rightarrow X^\ast$ dado por $\phi(x) = x^\ast$, si $\langle x \rangle \in x^\ast$. Observe que si $x \neq y$ , claramente $\langle x  \rangle \neq \langle y  \rangle $. Más aún, $\rho^\ast(\langle x  \rangle, \langle y  \rangle ) = \lim \rho(x , y ) = \rho(x, y) > 0$. De manera que $\langle x_n \rangle $ y $\langle y_n \rangle$ están en distintas clases de equivalencia. Hemos mostrado que el mapeo $\phi$ es inyectivo. Además, este mapeo es una isométrico, ya que $\rho(x, y) = \lim \rho(x, y)  = \rho^\ast(\langle x \rangle, \langle y \rangle) = \sigma(x^\ast, y^\ast) = \sigma(\phi(x), \phi(y))$. 
 
-Además, este mapeo es una isométrico, ya que $\rho(x, y) = \lim \rho(x, y)  = \rho^\ast(\langle x \rangle, \langle y \rangle) = \sigma(x^\ast, y^\ast)$. $\blacksquare$
+Por último, para ver que $\phi(X)$ es denso en $X^\ast$, sea $x^\ast $ en $X^\ast$ y sea $\epsilon > 0$. Sea $\langle x_n \rangle $ una sucesión de Cauchy en $X$ tal que $\langle x_n \rangle \in x^\ast$. Entonces existe un $N > 0$ tal que $\rho(x_m, x_N) < \epsilon/2$ si $m \geq N$. Consideremos la sucesión $\langle x_N \rangle$ es decir, la sucesión en la que todos sus términos son $x_N$ y sea  $y^\ast \in X^\ast$ la  clase de equivalencia tal que $\langle x_N \rangle \in y^\ast$. Más aún, esta clase de equivalencia es un elemento de $\phi(X)$  y satisface que $\sigma(x^\ast, y^\ast) = \rho^\ast(\langle x_n \rangle, \langle x_N \rangle) = \lim \rho(x_n, x_N) < \epsilon/2 < \epsilon$. Por tanto, $\phi(X)$ es denso en $X^\ast$. $\blacksquare$
 
 **Lema 4**. El espacio métrico $(X^\ast, \sigma)$ es completo. 
 
 *Demostración.* Sea $\langle x_k^\ast \rangle$ una sucesión de Cauchy en $X^\ast$. Sea $\langle x_{k,  n} \rangle$ una sucesión en $X$ tal que $\langle x_{k, n} \rangle \in x_k^\ast$, para toda $k \in \mathbb{N}$. Para toda $k$, $\langle x_{k, n} \rangle$ es sucesión de Cauchy en $X$. Entonces, existe $N_k \in \mathbb{N}$ tal que $\rho(x_{k, N_k}, x_{k, n}) < 2^{-k}$ si $n \geq N_k$. Consideremos la sucesión $\langle x_{k} \rangle $ con $x_k = x_{k, N_k}$ para toda $k \in \mathbb{N}$. Observe que
-
 
 $$
 \begin{eqnarray}
@@ -140,5 +143,6 @@ $$
 & < & 2^{-k} + \rho(x_{k, N_k}, x_{n, N_n})).
 \end{eqnarray}
 $$
-Bajo el mismo argumento anterior, $\rho(x_{k, N_k}, x_{n, N_n})) \to 0$ , cuando $n, k \to \infty$. Por tanto $x_k^\ast \to x^\ast$ y  la demostración está completa. $\blacksquare$
+Bajo el mismo argumento anterior, $\rho(x_{k, N_k}, x_{n, N_n})) \to 0$ , cuando $n, k \to \infty$. Por tanto $x_k^\ast \to x^\ast$ y  la demostración está completa. :metal:
 
+[ ] Falta demostrar cerradura. 
