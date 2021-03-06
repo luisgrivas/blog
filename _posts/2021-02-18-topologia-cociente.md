@@ -26,14 +26,14 @@ Es fácil comprobar que $\tau_A$ satisface los axiomas de topología.
 
 Dada una partición, sabemos que esta induce una relación de equivalencia en $X$ (el converso también es cierto). Entonecs podemos pensar en $X^\ast$ como el espacio resultante después de *identificar* puntos equivalentes en $X$. Al espacio cociente también se le llama **espacio de identificación** de $X$.
 
-**Teorema. ** Sea $p: X \rightarrow Y$ un mapeo cociente. Sea $A$ un subespacio de $X$ que es saturado respecto a $p$. Sea $q: A \rightarrow p(A)$ el mapeo obtenido cuando se restringe a $p$. Entonces
+**Teorema.** Sea $p: X \rightarrow Y$ un mapeo cociente. Sea $A$ un subespacio de $X$ que es saturado respecto a $p$. Sea $q: A \rightarrow p(A)$ el mapeo obtenido cuando se restringe a $p$. Entonces
 
 1. Si $A$ es abierto o cerrrado en $X$, entonces $q$ es un mapeo cociente.
 2. Si $p$ es un mapeo abierto o cerrado, entonces $q$ es un mapeo cociente.
 
 **Teorema.** Sea $p: X \rightarrow Y$ un mapeo cociente. Sea $Z$ un espacio y sea $g: X \rightarrow Z$ un mapeo que es constante en todo conjunto de la forma $p^{-1}(\{y\})$, para $y\in Y$. Entonces $g$ induce un mapeo $f: Y \rightarrow Z$ tal que $f \circ p = g$. El mapeo inducido $f$ es continuo si y solo si $g$ es continuo; $f$ es un mapeo cociente si y solo si $g$ es un mapeo cociente. 
 
-### ![mapeo-cociente](../assets/images/mapeo-cociente.png)
+### ![mapeo-cociente](/blog/assets/images/mapeo-cociente.png)
 
 
 
