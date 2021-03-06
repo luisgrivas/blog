@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title: "Topología Cociente"
 date: 2021-01-18 12:00:00
 categories: posts

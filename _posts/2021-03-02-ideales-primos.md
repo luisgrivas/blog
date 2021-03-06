@@ -3,7 +3,7 @@ layout: post
 title: "Ideales de anillos"
 date: 2021-03-02 14:30:00
 categories: posts
-tags: algebra
+tags: [algebra, ideales]
 ---
 
 ## Ideales de anillos
@@ -14,7 +14,7 @@ En lo siguiente, se asume que un anillo $A$ es conmutativo y que tiene un elemen
 
 **Ejemplo.** Es claro que los conjuntos $\{0\}$ y $A$ son ideales de cualquier anillo $A$.
 
-**Ejemplo.** Si $A$ es un anillo y $a \in A$, el conjunto $(a) := \{ra : r \in A \}$ es un ideal. A estos ideales se les conoce como **ideales principales**.
+**Ejemplo.** Si $A$ es un anillo y $a \in A$, el conjunto $(a) := \{ra : r \in A \}$ es un ideal. A estos ideales se les conoce como **ideales principales**. Por ejemplo, el conjunto de enteros pares $(2)$ es un ideal en $\mathbb{Z}$. 
 
 **Ejemplo.** Sea $\phi: A \rightarrow B$ un homomorfismo de anillos. Una computación directa demuestre que el kernel de $\phi$ definido como $\ker \phi := \{x \in R: \phi(x) = 0\}$ es un ideal de $A$.
 
@@ -86,6 +86,8 @@ $$
 **Teorema**. La familia $\tau := \{V(E) : E \subset A\}$ forma una topología en $X$. Esta topología se le conoce como **topología de Zariski**. Al espacio topológico $(X, \tau)$ se le llama **espectro primo** de $A$ y se denota por $Spec(A)$.
 
 **Ejemplo.** Sea 
+
+**DRAFT**
 
 **Referencias**
 
