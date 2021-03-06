@@ -6,7 +6,7 @@ categories: posts
 tags: [algebra, ideales]
 ---
 
-## Ideales de anillos
+## Ideales
 
 En lo siguiente, se asume que un anillo $A$ es conmutativo y que tiene un elemento unitario.
 
@@ -14,7 +14,7 @@ En lo siguiente, se asume que un anillo $A$ es conmutativo y que tiene un elemen
 
 **Ejemplo.** Es claro que los conjuntos $\{0\}$ y $A$ son ideales de cualquier anillo $A$.
 
-**Ejemplo.** Si $A$ es un anillo y $a \in A$, el conjunto $(a) := \{ra : r \in A \}$ es un ideal. A estos ideales se les conoce como **ideales principales**. Por ejemplo, el conjunto de enteros pares $(2)$ es un ideal en $\mathbb{Z}$. 
+**Ejemplo.** Si $A$ es un anillo y $a \in A$, el conjunto $(a) := \{ra : r \in A \}$ es un ideal. A estos ideales se les conoce como **ideales principales**. En el anillo $\mathbb{Z}$ sucede que todo ideal es principal. Para ver esto sea $I$ un ideal de $\mathbb{Z}$ distinto $(0)$. Como $I$ es un subgrupo aditivo, entonces $I \cap \mathbb{N} \neq \varnothing $. Por el Principio del Buen Orden, existe un natural mínimo en $I$, digamos $d$. Afirmamos que $I = (d)$. Claramente, $(d) \subset I$. Sea $p \in I$ y dividámoslo por $d$ mediante el algoritmo de Euclides: $p = qd + r$, con $0 \leq r < d$. Entonces $r = p - dq \in I$, ya que este es un ideal. Pero $r < d$ y $d$ es el natural mínimo que pertenece a $I$; luego $r = 0$. Por tanto $ I \subset (d).$
 
 **Ejemplo.** Sea $\phi: A \rightarrow B$ un homomorfismo de anillos. Una computación directa demuestre que el kernel de $\phi$ definido como $\ker \phi := \{x \in R: \phi(x) = 0\}$ es un ideal de $A$.
 
@@ -67,7 +67,23 @@ Sea $\mathcal{R} $ el conjunto de todos los elementos nilpotentes de $A$. A este
 
 *Demostración:*
 
+El nilradical posee una interesante caracterización descrita por la siguiente proposición.
+
+**Proposición.** El nilradical de $A$ es la intersección de todos los ideales primos de $A$. 
+
+*Demostración:*
+
+Una aplicación inmediata de esta proposición es la resolución del siguiente problema.
+
+**Aplicación.** $f = \sum_{r=0}^n a_r x^r \in A[x]$ es una unidad si y solo si $a_0$ es una unidad y $a_1, \ldots, a_n$ son nilpotentes.
+
+*Demostración:* $(\Leftarrow)$ Vease [esta publicación](https://www.luisgrivas.com/blog/posts/2021/03/01/ej-algebra-1.html).
+
+$(\Rightarrow)$ Sea $\mathcal{R}$ el nilradical de $A$ y sea $f = \sum_{r=0}^n a_r x^r \in A[x]$ es una unidad. Entonces existe $g = \sum_{} \in A[x]$ tal que $fg = 1$.
+
 ## El espectro primo de un anillo
+
+![](http://www.neverendingbooks.org/DATA2/mumforddrawing.jpg)
 
 Sea $A$ un anillo y sea $X$ el conjunto de todos los ideales primos de $A$. Para cada conjunto $E$ de $A$, sea $V(E)$ el conjunto de todos los ideales primos de $A$ que contienen a $E$. 
 
