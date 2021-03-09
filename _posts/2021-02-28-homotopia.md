@@ -6,35 +6,43 @@ categories: posts
 tags: [topologia, topologia-algebraica]
 ---
 
+![](https://upload.wikimedia.org/wikipedia/commons/2/26/Mug_and_Torus_morph.gif)
+
+---
+
 En lo siguiente, $X, Y$ y $Z$ son espacios topológicos. Denotamos al intervalo $[0, 1]$ por $I$. Todos los mapeos considerados son continuos.
 
 **Definición.** Dos mapeos $f, g: X \rightarrow Y$ son **homotópicos** si existe un mapeo continuo $F: X \times I \rightarrow Y$ tal que $F(x, 0) = f(x)$ y $F(x, 1) = g(x)$ para toda $x \in X$. Si dos mapeos $f$ y $g$ son homotópicos escribimos $f \simeq g$. Decimos que el mapeo $F$ es una homotopía entre $f$ y $g$.
 
-**Ejemplo.** Sean $f: \mathbb{R} \rightarrow \mathbb{R}^2$ y $g: \mathbb{R} \rightarrow \mathbb{R}^2$ mapeos definidos como $f(x) = (x, x^3)$ y $g(x) = (x, x)$. Entonces el mapeo $H(x, t) = g(x)(1 - t) + f(x)t = (x, (1 - t)x + tx^3)$ es una homotopía entre $f$ y $g$.
+![](/blog/assest/images/homotopia.png)
 
-**Ejemplo**. Si $X$ es un espacio topológico con un solo punto, entonces $[X, Y]$ es el conjunto de componentes conexas por caminos de $Y$. 
+**Ejemplo 1.** Sean $f: \mathbb{R} \rightarrow \mathbb{R}^2$ y $g: \mathbb{R} \rightarrow \mathbb{R}^2$ mapeos definidos como $f(x) = (x, x^3)$ y $g(x) = (x, x)$. Entonces el mapeo $H(x, t) = g(x)(1 - t) + f(x)t = (x, (1 - t)x + tx^3)$ es una homotopía entre $f$ y $g$.
+
+**Ejemplo 2**. Si $X$ es un espacio topológico con un solo punto, entonces $[X, Y]$ es el conjunto de componentes conexas por caminos de $Y$. 
 
 ## Clases de homotopía
 
-**Teorema 1.** La relación $f$ es homotópico a $g$ es una relación de equivalencia entre todos los mapeos de $X$ en $Y$.
+**Teorema 1.** La relación $f$ es homotópico a $g$ es una relación de equivalencia entre todos los mapeos de $X$ en $Y$. Denotamos a las clases de homotopía de mapeos continuos de $X$ en $Y$ como $[X, Y]$.
 
 *Demostración:* Sea $f: X \rightarrow Y$ un mapeo. Entonces $F(x, t) = f(x)$ es una homotopía entre $f$ y $f$. Por tanto $f \simeq f$.
 
 Si $f \simeq g$, sea $H$ la homotopía entre $f$ y $g$. Entonces $F(x, t) = H(x, 1- t)$ es una homotopía entre $g$ y $f$.
 
 Si $f \simeq g$ y $g \simeq h$, sea $F$ la homotopía entre $f$ y $g$ y sea $G$ la homotopía entre $g$ y $h$. Entonces la función
+
+
 $$
 H(x, t) := \cases{F(x, 2t) \ \text{ si } t\in [0, 1/2] \\  G(x, 2t-1) \ \text{ si } t \in [1/2, 1],}
 $$
+
+
 es una homotopía entre $f$ y $h$: es claro que $H(x, 0) = F(x, 0) = f(x)$ y $H(x, 1) = G(x, 1) = h(x)$ para toda $x \in X$. Para demostrar que es continua, véanse los resultados de la sección Lema del pegado. $\blacksquare$
-
-**Nota:** A las clases de homotopía de funciones continuas de $X$ en $Y$ lo denotaremos por $[X, Y]$.
-
-
 
 **Teorema 2.** La homotopía se preserva mediante composición: Si $f_0, f_1: X \rightarrow Y$ y $g_0, g_1: Y \rightarrow Z$ son mapeos continuos y $f_0 \simeq f_1$ y $g_0 \simeq g_1$, entonces $g_0\circ f_0 \simeq g_1 \circ f_1.$
 
 *Demostración:* Sea $F$ la homotopía entre $f_0$ y $f_1$ y sea $G$ la homotopía entre $g_0 $ y $g_1$. Definamos $H: X \times I \rightarrow Y$ como 
+
+
 $$
 H(x, t) = G(F(x, t), t).
 $$
