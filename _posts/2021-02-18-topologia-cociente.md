@@ -47,6 +47,14 @@ a. El mapeo $g$ induce un mapeo continuo y biyectivo $f: X^\ast \rightarrow Z$, 
 
 b. Si $Z$ es Hausdorff, entonces $X^\ast$ es Hausdorff. 
 
+**Proposición.** Sean $X$ y $Y$ espacios topológicos, y sea $f: X \rightarrow Y$ un mapeo continuo tal que  es abierto o cerrado. Entonces
+
+1. Si $f$ es inyectiva, entonces es un *topological embedding*
+2. Si $f$ es sobreyectiva, entonces es un mapeo cociente.
+3. Si $f$ es biyectiva, entonces es un homeomorfismo.
+
+**Proposición**. Supóngase que $F$ es un mapeo continuo y sobreyectivo de un espacio compacto en un espacio Hausdorff. Entonces $F$ es un mapeo cociente.
+
 ### Bibliografía
 
 - Munkres, ...

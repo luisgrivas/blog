@@ -118,7 +118,7 @@ F: CX \rightarrow Y.
 $$
 *Demostración:* Sea $q: X \times I \rightarrow CX$ el mapeo cociente. Es claro que $X$ y $X \times \{0\}$ son homeomorfos. Además, $q\mid_{X \times \{0\}}$ es un. homeomorfismo entre $X \times \{0\}$ y $q(X \times \{0\})$; esto muestra que $X$ y $q(X \times \{0\})$ son homeomorfomos. $(\Leftarrow)$ Si $F: CX \rightarrow Y$ es una extensión continua de $f$, entonces el mapeo $H: X \times I \rightarrow Y$ definido como $H(x, t) = F(q(x, t))$ es una homotopía entre $f$ y una contante $F(q(x, 1))$. Por tanto $f$ es homotópicamente nula. 
 
-$(\Rightarrow)$. Suponga $f$ es homotópica a una función constante $c: X \rightarrow \{y_0\} \subset Y$ y sea $H$ la homotopía entre ellas. Entonces $H \circ q^{-1}$ *es una extensión continua de * $f$. ? $\blacksquare$ 
+$(\Rightarrow)$. Suponga $f$ es homotópica a una función constante $c: X \rightarrow \{y_0\} \subset Y$ y sea $H$ la homotopía entre ellas. Entonces $H \circ q^{-1}$ es una extensión continua de  $f$. $\blacksquare$ 
 
 **Definición.** Dos espacios $X,Y$ son **homotópicamente equivalentes** ($X \simeq Y$) si existen mapeos continuos $f: X \rightarrow Y$ y $g: Y \rightarrow X$ tales que $f\circ g \simeq 1_Y$ y $g \circ f \simeq 1_X$. Dos espacios homotópicamente equivalentes se dice que son del mismo **tipo de homotopía**.
 
