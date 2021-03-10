@@ -14,7 +14,7 @@ En lo siguiente, $X, Y$ y $Z$ son espacios topológicos. Denotamos al intervalo 
 
 **Definición.** Dos mapeos $f, g: X \rightarrow Y$ son **homotópicos** si existe un mapeo continuo $F: X \times I \rightarrow Y$ tal que $F(x, 0) = f(x)$ y $F(x, 1) = g(x)$ para toda $x \in X$. Si dos mapeos $f$ y $g$ son homotópicos escribimos $f \simeq g$. Decimos que el mapeo $F$ es una homotopía entre $f$ y $g$.
 
-![](/blog/assest/images/homotopia.png)
+![](/blog/assets/images/homotopia.png)
 
 **Ejemplo 1.** Sean $f: \mathbb{R} \rightarrow \mathbb{R}^2$ y $g: \mathbb{R} \rightarrow \mathbb{R}^2$ mapeos definidos como $f(x) = (x, x^3)$ y $g(x) = (x, x)$. Entonces el mapeo $H(x, t) = g(x)(1 - t) + f(x)t = (x, (1 - t)x + tx^3)$ es una homotopía entre $f$ y $g$.
 
@@ -116,7 +116,9 @@ Recordemos que el **cono**  $CX$ de un espacio $X$ es el [espacio cociente](http
 $$
 F: CX \rightarrow Y.
 $$
-*Demostración:* Sea $q: X \times I \rightarrow CX$ el mapeo cociente. 
+*Demostración:* Sea $q: X \times I \rightarrow CX$ el mapeo cociente. Es claro que $X$ y $X \times \{0\}$ son homeomorfos. Además, $q\mid_{X \times \{0\}}$ es un. homeomorfismo entre $X \times \{0\}$ y $q(X \times \{0\})$; esto muestra que $X$ y $q(X \times \{0\})$ son homeomorfomos. $(\Leftarrow)$ Si $F: CX \rightarrow Y$ es una extensión continua de $f$, entonces el mapeo $H: X \times I \rightarrow Y$ definido como $H(x, t) = F(q(x, t))$ es una homotopía entre $f$ y una contante $F(q(x, 1))$. Por tanto $f$ es homotópicamente nula. 
+
+$(\Rightarrow)$. Suponga $f$ es homotópica a una función constante $c: X \rightarrow \{y_0\} \subset Y$ y sea $H$ la homotopía entre ellas. Entonces $H \circ q^{-1}$ *es una extensión continua de * $f$. ? $\blacksquare$ 
 
 **Definición.** Dos espacios $X,Y$ son **homotópicamente equivalentes** ($X \simeq Y$) si existen mapeos continuos $f: X \rightarrow Y$ y $g: Y \rightarrow X$ tales que $f\circ g \simeq 1_Y$ y $g \circ f \simeq 1_X$. Dos espacios homotópicamente equivalentes se dice que son del mismo **tipo de homotopía**.
 
@@ -144,13 +146,13 @@ De manera equivalente, decimos que $A \subset X$ es un retracto de $X$ si la fun
 
 **Proposición.** Si $X$ es Hausdorff y $A \subset X$ es un retracto de $X$, entonces $A$ es cerrado en $X$.
 
-**Definición.** Si una retracción $
-
 
 
 
 
 **DRAFT**
+
+---
 
  **Referencias**
 
