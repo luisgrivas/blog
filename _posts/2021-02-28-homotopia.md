@@ -132,7 +132,7 @@ $(\Rightarrow)$. Suponga $f$ es homotópica a una función constante $c: X \righ
 
 $g \circ c = c \simeq 1_{X}$
 
- y $c \circ g = 1_{Y} \simeq 1_{Y}$.
+ y $c \circ g = 1_Y \simeq 1_Y$.
 
 Esto muestra que $X$ es del mismo tipo de homotopía que el espacio de un solo punto.
 
