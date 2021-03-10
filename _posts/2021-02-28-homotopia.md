@@ -132,7 +132,9 @@ $(\Rightarrow)$. Suponga $f$ es homotópica a una función constante $c: X \righ
 
 $g \circ c = c \simeq 1_{X}$
 
- y $c \circ g = 1_{Y} \simeq 1_{Y}$. Esto muestra que $X$ es del mismo tipo de homotopía que el espacio de un solo punto.
+ y $c \circ g = 1_{Y} \simeq 1_{Y}$.
+
+Esto muestra que $X$ es del mismo tipo de homotopía que el espacio de un solo punto.
 
 $(\Leftarrow)$ Suponga que $X \simeq Y= \{y_0\}$, es decir, existen mapeos $f: X \rightarrow Y$ y $g: Y \rightarrow X$ tales que $f \circ g \simeq  1_Y$ y $g \circ f \simeq 1_X$. Sea $c: X \rightarrow \{g(y)\}$ el mapeo constante. Entonces $c = g \circ f \simeq 1_X$, lo que muestra que $X$ es contraible. $\blacksquare$
 
