@@ -128,13 +128,7 @@ $(\Rightarrow)$. Suponga $f$ es homotópica a una función constante $c: X \righ
 
 **Teorema.** Un espacio $X$ es contraible si y solo si $X$ es del mismo tipo de homotopía que el espacio de un solo punto. 
 
-*Demostración:* $(\Rightarrow)$ Si $X$ es contraible, el mapeo identidad $1: X \rightarrow X$ es homotópico a un mapeo constante $c: X \rightarrow \\{x_0\\} \subset X$. Consideremos el espacio $Y = \\{x_0\\}$ y el mapeo $g: Y \rightarrow X$ definido como $g(x) = x_0$. Entonces, 
-
-$g \circ c = c \simeq 1_{X}$
-
- y $c \circ g = 1_Y \simeq 1_Y$.
-
-Esto muestra que $X$ es del mismo tipo de homotopía que el espacio de un solo punto.
+*Demostración:* $(\Rightarrow)$ Si $X$ es contraible, el mapeo identidad $1: X \rightarrow X$ es homotópico a un mapeo constante $c: X \rightarrow \\{x_0\\} \subset X$. Consideremos el espacio $Y = \\{x_0\\}$ y el mapeo $g: Y \rightarrow X$ definido como $g(x) = x_0$. Entonces, $g \circ c = c \simeq 1_{X}$ y $c \circ g = 1_Y \simeq 1_Y$. Esto muestra que $X$ es del mismo tipo de homotopía que el espacio de un solo punto.
 
 $(\Leftarrow)$ Suponga que $X \simeq Y= \{y_0\}$, es decir, existen mapeos $f: X \rightarrow Y$ y $g: Y \rightarrow X$ tales que $f \circ g \simeq  1_Y$ y $g \circ f \simeq 1_X$. Sea $c: X \rightarrow \{g(y)\}$ el mapeo constante. Entonces $c = g \circ f \simeq 1_X$, lo que muestra que $X$ es contraible. $\blacksquare$
 
