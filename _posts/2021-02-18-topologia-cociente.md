@@ -31,7 +31,17 @@ Dada una partición, sabemos que esta induce una relación de equivalencia en $X
 1. Si $A$ es abierto o cerrrado en $X$, entonces $q$ es un mapeo cociente.
 2. Si $p$ es un mapeo abierto o cerrado, entonces $q$ es un mapeo cociente.
 
-**Teorema.** Sea $p: X \rightarrow Y$ un mapeo cociente. Sea $Z$ un espacio y sea $g: X \rightarrow Z$ un mapeo que es constante en todo conjunto de la forma $p^{-1}(\{y\})$, para $y\in Y$. Entonces $g$ induce un mapeo $f: Y \rightarrow Z$ tal que $f \circ p = g$. El mapeo inducido $f$ es continuo si y solo si $g$ es continuo; $f$ es un mapeo cociente si y solo si $g$ es un mapeo cociente. 
+
+
+**Teorema.** Sean $X, Y$ espacios topológicos y sea $q: X \rightarrow Y$ un mapeo cociente. Para cualquier espacio $Z$, el mapeo $f: Y \rightarrow Z$ es continua si y solo si la composición $f \circ q$ es continua.
+
+
+
+
+
+
+
+**Teorema (Passing to the Quotient).** Sea $p: X \rightarrow Y$ un mapeo cociente. Sea $Z$ un espacio y sea $g: X \rightarrow Z$ un mapeo que es constante en todo conjunto de la forma $p^{-1}(\{y\})$, para $y\in Y$. Entonces $g$ induce un mapeo $f: Y \rightarrow Z$ tal que $f \circ p = g$. El mapeo inducido $f$ es continuo si y solo si $g$ es continuo; $f$ es un mapeo cociente si y solo si $g$ es un mapeo cociente. 
 
 ### ![mapeo-cociente](/blog/assets/images/mapeo-cociente.png)
 
@@ -54,6 +64,12 @@ b. Si $Z$ es Hausdorff, entonces $X^\ast$ es Hausdorff.
 3. Si $f$ es biyectiva, entonces es un homeomorfismo.
 
 **Proposición**. Supóngase que $F$ es un mapeo continuo y sobreyectivo de un espacio compacto en un espacio Hausdorff. Entonces $F$ es un mapeo cociente.
+
+
+
+
+
+
 
 ### Bibliografía
 
