@@ -12,7 +12,7 @@ tags: [analisis-real, medida]
 
 ## Todo conjunto medible es casi un abierto
 
-**Lema 1.** Sea $A$ un conjunto   sea $\epsilon > 0$. Entonces existe un conjunto abierto $O$ tal que $A \subset O$ y $m^\ast O \leq m^\ast A + \epsilon$. Existe un $G \in \mathcal{G}_\delta$ tal que $A \subset G$ y $m^\ast A = m^\ast G$. 
+**Lema 1.** Sea $A$ un conjunto sea $\epsilon > 0$. Entonces existe un conjunto abierto $O$ tal que $A \subset O$ y $m^\ast O \leq m^\ast A + \epsilon$. Existe un $G \in \mathcal{G}_\delta$ tal que $A \subset G$ y $m^\ast A = m^\ast G$. 
 
 *Demostración:*  Si $m^\ast A = \infty $, la conclusión se satisface inmediatamente. Suponga que $m^* A < \infty$. Entonces, existe una cubierta numerable de intervalos abiertos $\{I_n\}$ tal que $ \sum_n l(I_n) \leq  m^\ast A + \epsilon $. Luego, $O = \bigcup_n I_n $ satisface lo requerido. 
 

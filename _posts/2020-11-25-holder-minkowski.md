@@ -20,18 +20,43 @@ $$
 $$
 La desigualdad solo es obtenida si y solo si, existen constantes $\alpha$, $\beta$  tales que $\alpha \lvert f \lvert^p = \beta \lvert g \lvert^q$ c.s.
 
-*Demostración.* Si $\parallel f \parallel_p = \parallel g \parallel_q = 1$, entonces, $\lvert fg \lvert \leq  \frac{\lvert f \lvert^p}{p} + \frac{ \lvert g \lvert^q}{q} $. Luego, $\int \lvert fg \lvert \leq \int\left( \frac{\lvert f \lvert^p}{p} + \frac{ \lvert g \lvert^q}{q}\right) = \frac{1}{p}\int \lvert f \lvert^q + \frac{1}{q} \int  \lvert g \lvert^q = 1.$ Por tanto $f\cdot g \in L^1$. 
-
-Suponga ahora que $ \parallel f \parallel_p \neq 0 $ y $ \parallel g \parallel_q \neq 0$. Entonces $\frac{1}{\parallel f \parallel_p \parallel g \parallel_q} \int \lvert fg \lvert = \int \frac{\lvert f \lvert}{\parallel f \parallel_p} \frac{\lvert g \lvert }{\parallel g \parallel_q} \leq 1$. Luego, $\int \lvert fg \lvert \leq \parallel f \parallel_p \parallel g \parallel_q$. <u>faltan casos</u>
+*Demostración.* Considere el caso $p = 1$ y $q = \infty$. Observe que $\lvert f g \lvert = \lvert f \lvert \cdot \lvert g \lvert \leq \lvert f \lvert \cdot \parallel g \parallel_\infty$. Entonces 
 
 
+$$
+\int \lvert f g\lvert \leq \parallel g \parallel_\infty \int \lvert f \lvert = \parallel f\parallel_p \cdot \parallel g \parallel_\infty,
+$$
+ 
+
+obteniendo lo deseado.
+
+ Ahora supong que $\parallel f \parallel_p = \parallel g \parallel_q = 1$, entonces $\lvert fg \lvert \leq  \frac{\lvert f \lvert^p}{p} + \frac{ \lvert g \lvert^q}{q} $ por la desigualdad de Young. Luego, 
+
+
+$$
+\int \lvert fg \lvert \leq \int\left( \frac{\lvert f \lvert^p}{p} + \frac{ \lvert g \lvert^q}{q}\right) = \frac{1}{p}\int \lvert f \lvert^q + \frac{1}{q} \int  \lvert g \lvert^q = 1 = \parallel f\parallel_p \cdot \parallel g \parallel_q, 
+$$
+y por tanto  $f\cdot g \in L^1$. 
+
+Suponga ahora que $ \parallel f \parallel_p \neq 0 $ y $ \parallel g \parallel_q \neq 0$. Entonces 
+
+
+$$
+\frac{1}{\parallel f \parallel_p \parallel g \parallel_q} \int \lvert fg \lvert = \int \frac{\lvert f \lvert}{\parallel f \parallel_p} \frac{\lvert g \lvert }{\parallel g \parallel_q} \leq 1.
+$$
+
+
+ Despejando se obtiene $\int \lvert fg \lvert \leq \parallel f \parallel_p \parallel g \parallel_q$, y por tanto $f \cdot g \in L^1$. 
+
+Finalmente, la desigualdad se satisface trivialmente si $\parallel f \parallel_p = 0$ o $\parallel g \parallel_q = 0$. $\blacksquare$
 
 **Desigualdad de Minkowski.** Si $f$ y $g$ son elementos de $L^p$, entonces $f + g \in L^p $ y
 $$
 \parallel f + g \parallel_p \leq \parallel f \parallel_p + \parallel g \parallel_q.
 $$
-*Demostración.*
+*Demostración.* Es claro que $f + g \in L^p$, ya que $\lvert f + g \lvert \leq \lvert f \lvert + \lvert g \lvert $.
 
 
 
 **DRAFT**
+
