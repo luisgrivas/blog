@@ -8,7 +8,7 @@ tags: algebra, galois, polinomios
 
 En este post demostraremos el siguiente teorema:
 
-**Proposición.** El número de polinomios mónicos irreducibles de grado $n$ sobre $\mathbb{F}_p$ es
+**Teorema 1.** El número de polinomios mónicos irreducibles de grado $n$ sobre $\mathbb{F}_p$ es
 
 $$ N_n = \frac{1}{n}\sum_{d \mid n} \mu(d) p^{n/d}, $$
 
@@ -17,11 +17,9 @@ donde la sumatoria recorre todos los divisores $d$ de $n$.
 
 ## Campos finitos
 
-
-
 **Teorema 2.** Sea $p$ un número primo y $n$ un entero positivo. El polinomio $x^{p^n}-x$ es el producto de todos los polinomios mónicos irreducibles sobre $\mathbb{F}_p$ cuyo grado $d$ divide a $n$.
 
-*Demostración:* Sea $q(x) \in \mathbb{F}_{p}[x]$ un polinomio mónico e irreducible de grado $d$. Sea $K = \mathbb{F}_p[x] / (q)$ el campo cuya dimensión como espacio vectorial sobre $\mathbb{F}_p$ es $d$. Si $q(x) \mid x^{p^n} - x$, entonces $K$ es (isomorfo a) un subcampo del *splitting field*  $\mathbb{F}_{p^n}$ de $x^{p^n}-x$. Luego, $n = [\mathbb{F}_{p^n}: \mathbb{F}_{p}] = [\mathbb{F}_{p^n}:K] [K:\mathbb{F}_{p}] = [\mathbb{F}_{p^n}:K] \cdot d$, es decir, $d \mid n$.
+*Demostración:* Sea $q(x) \in \mathbb{F}_{p} [x]$ un polinomio mónico e irreducible de grado $d$. Sea $K = \mathbb{F}_p[x] / (q)$ el campo cuya dimensión como espacio vectorial sobre $\mathbb{F}_p$ es $d$. Si $q(x) \mid x^{p^n} - x$, entonces $K$ es (isomorfo a) un subcampo del *splitting field*  $\mathbb{F}_{p^n}$ de $x^{p^n}-x$. Luego, $n = [\mathbb{F}_{p^n}: \mathbb{F}_{p}] = [\mathbb{F}_{p^n}:K] [K:\mathbb{F}_{p}] = [\mathbb{F}_{p^n}:K] \cdot d$, es decir, $d \mid n$.
 
 Conversamente, suponga que $m = n/d$. Consideremos el automorfismo (verificar) $\phi: \mathbb{F}_{p^n} \rightarrow \mathbb{F}_{p^n}$ definido como $\phi(x) = x^{p^m}$. El campo fijo $K^\prime = \{x \in \mathbb{F}_{p^n}: \phi(x) = x\}$ es isomorfo a $K$.
 
@@ -50,7 +48,46 @@ El plan de esta sección es mostrar que las funciones aritméticas $f$ tales que
 
 **Lema.** La multiplicación de Dirichlet es asociativa y conmutativa. 
 
-*Demostración:* Sean $f, g$ y $k$ funciones aritméticas. 
+*Demostración:* Sean $f, g$ y $k$ funciones aritméticas. Observe que, si $d$ es divisor de $n$, entonces $\frac{n}{d}$ también es divisor de $n$. Se sigue directamente de este hecho que $(f \ast g)(n) = \sum_{d \mid n} f(d) g\left(\frac{n}{d}\right) =  \sum_{d \mid n} g(d) f\left(\frac{n}{d}\right) = (g \ast f)(n).$
+
+Para demostrar que el producto es asociativo, vease que 
+$$
+\begin{eqnarray}
+(f \ast g) \ast k &=& \left( \sum_{d \mid n} f(d) g\left(\frac{n}{d}\right) \right) \ast k \\
+&=& \sum_{d^\prime \mid n} \left( \sum_{d \mid d^\prime} f(d) g\left(\frac{d^\prime}{d}\right) \right) k\left(\frac{n}{d^\prime}\right) \\
+&=& \sum_{abc = n} f(a)g(b)k(c).
+
+\end{eqnarray}
+$$
+De manera similar, encontramos que 
+$$
+f \ast (g \ast k ) = \sum_{abc = n} f(a)g(b)k(c).
+$$
+El elemento identidad bajo el producto de Dirichlet es el siguiente.
+
+**Definición.** La función aritmética $I$ definida como
+$$
+I(n) = \cases{1 \ \ \ \text{si } n = 1,\\ 0 \ \ \ \text{si } n > 1.}
+$$
+se le conoce como función identidad.  
+
+**Lema.**  Para toda función aritmética $f$ se satisface que $f \ast I = I \ast f = f$.
+
+*Demostración:* simple cálculo.
+
+**Lema.** Si $f$ es una función aritmética tal que $f(1) \neq 0$, entonces existe una función aritmética $f^{-1}$ llamada inversa de Dirichlet tal que $f \ast f^{-1} = f^{-1}\ast f = I$. Además, podemos encontrar una expresión para $f^{-1}$ dada por la siguiente relación de recurrencia:
+$$
+f^{-1}(1) = \frac{1}{f(1)}, \ \ \ \ f^{-1}(n) = \frac{-1}{f(1)} \sum_{d \mid n \\ d < n} f\left(\frac{n}{d}\right)f^{-1}(d) \ \ \text{ para } n > 1.
+$$
+*Demostración:* 
+
+
+
+Del lema anterior se deduce  que la función aritmética $u$ definida como $u(n) = 1$ para toda $n$ es la inversa de Dirichlet de la función de Möbius $\mu$.
+
+
+
+**Teorema 3.** El conjunto de todas las funciones aritméticas $f$ tales que $f(1) \neq 0$ forman un grupo abeliano bajo el producto de Dirichlet. 
 
 
 
@@ -63,6 +100,10 @@ $$
 g(n) = \sum_{d \mid n} f(d) \mu\left(\frac{n}{d} \right).
 $$
 *Demostración:* Si $f(n) = \sum_{d \mid n} g(d)$, entonces $f = g \ast u$. Multiplicando por $\mu$ obtenemos $f \ast \mu = (g \ast u) \ast \mu = g \ast (u \ast \mu) = g \ast I = g.$
+
+
+
+**DRAFT**
 
 ---
 
