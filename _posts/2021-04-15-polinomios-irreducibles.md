@@ -19,7 +19,7 @@ donde la sumatoria recorre todos los divisores $d$ de $n$.
 
 **Teorema 2.** Sea $p$ un número primo y $n$ un entero positivo. El polinomio $x^{p^n}-x$ es el producto de todos los polinomios mónicos irreducibles sobre $\mathbb{F_p}$ cuyo grado $d$ divide a $n$.
 
-*Demostración:* Sea $q(x) \in \mathbb{F_p}[x]$ un polinomio mónico e irreducible de grado $d$. Sea $K = \mathbb{F}_p[x] / (q)$ el campo cuya dimensión como espacio vectorial sobre $\mathbb{F_p}$ es $d$. Si $q(x) \mid x^{p^n} - x$, entonces $K$ es (isomorfo a) un subcampo del splitting field  $\mathbb{F}_{p^n}$ de $x^{p^n}-x$. Luego, $n = [\mathbb{F}_{p^n}: \mathbb{F}_p] = [\mathbb{F}_{p^n}:K] [K:\mathbb{F}_p] = [\mathbb{F}_{p^n}:K] \cdot d$, es decir, $d \mid n$.
+*Demostración:* Sea $q(x) \in \mathbb{F_p}[x]$ un polinomio mónico e irreducible de grado $d$. Sea $K = \mathbb{F_p}[x] / (q)$ el campo cuya dimensión como espacio vectorial sobre $\mathbb{F_p}$ es $d$. Si $q(x) \mid x^{p^n} - x$, entonces $K$ es (isomorfo a) un subcampo del campo de descomposición  $\mathbb{F}_{p^n}$ de $x^{p^n}-x$. Luego, $n = [\mathbb{F}_{p^n}: \mathbb{F}_p] = [\mathbb{F}_{p^n}:K] [K:\mathbb{F}_p] = [\mathbb{F}_{p^n}:K] \cdot d$, es decir, $d \mid n$.
 
 Conversamente, suponga que $m = n/d$. Consideremos el automorfismo (verificar) $\phi: \mathbb{F}_{p^n} \rightarrow \mathbb{F}_{p^n}$ definido como $\phi(x) = x^{p^m}$. El campo fijo $K^\prime = \{x \in \mathbb{F}_{p^n}: \phi(x) = x\}$ es isomorfo a $K$.
 
