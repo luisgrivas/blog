@@ -26,6 +26,8 @@ donde la sumatoria recorre todos los divisores $d$ de $n$.
 ## Producto de Dirichlet y fórmula de inversión de Möbius 
 
 **Definición.** Definimos a la función de Möbius $\mu$ como sigue:
+
+
 $$
 \mu(1) = 1;
 $$
@@ -51,6 +53,8 @@ El plan de esta sección es mostrar que las funciones aritméticas $f$ tales que
 *Demostración:* Sean $f, g$ y $k$ funciones aritméticas. Observe que, si $d$ es divisor de $n$, entonces $\frac{n}{d}$ también es divisor de $n$. Se sigue directamente de este hecho que $(f \ast g)(n) = \sum_{d \mid n} f(d) g\left(\frac{n}{d}\right) =  \sum_{d \mid n} g(d) f\left(\frac{n}{d}\right) = (g \ast f)(n).$
 
 Para demostrar que el producto es asociativo, vease que 
+
+
 $$
 \begin{eqnarray}
 (f \ast g) \ast k &=& \left( \sum_{d \mid n} f(d) g\left(\frac{n}{d}\right) \right) \ast k \\
@@ -59,12 +63,16 @@ $$
 \end{eqnarray}
 $$
 De manera similar, encontramos que 
+
+
 $$
 f \ast (g \ast k ) = \sum_{abc = n} f(a)g(b)k(c).
 $$
 El elemento identidad bajo el producto de Dirichlet es el siguiente.
 
 **Definición.** La función aritmética $I$ definida como
+
+
 $$
 I(n) = \cases{1 \ \ \ \text{si } n = 1,\\ 0 \ \ \ \text{si } n > 1.}
 $$
@@ -75,6 +83,7 @@ se le conoce como función identidad.
 *Demostración:* simple cálculo.
 
 **Lema.** Si $f$ es una función aritmética tal que $f(1) \neq 0$, entonces existe una función aritmética $f^{-1}$ llamada inversa de Dirichlet tal que $f \ast f^{-1} = f^{-1}\ast f = I$. Además, podemos encontrar una expresión para $f^{-1}$ dada por la siguiente relación de recurrencia:
+
 
 
 $$
@@ -91,6 +100,8 @@ Del lema anterior se deduce  que la función aritmética $u$ definida como $u(n)
 **Teorema 3.** El conjunto de todas las funciones aritméticas $f$ tales que $f(1) \neq 0$ forman un grupo abeliano bajo el producto de Dirichlet. 
 
 **Teorema (Fórmula de inversión de Möbius)**  La ecuación 
+
+
 $$
 f(n) = \sum_{d \mid n} g(d),
 $$
@@ -98,6 +109,8 @@ implica
 $$
 g(n) = \sum_{d \mid n} f(d) \mu\left(\frac{n}{d} \right).
 $$
+
+
 *Demostración:* Si $f(n) = \sum_{d \mid n} g(d)$, entonces $f = g \ast u$. Multiplicando por $\mu$ obtenemos $f \ast \mu = (g \ast u) \ast \mu = g \ast (u \ast \mu) = g \ast I = g.$
 
 ### Resultado principal
@@ -110,7 +123,6 @@ Luego, por la fórmula de inversión de Möbius, obtenemos la expresión
 $$
 N_n = \frac{1}{n} \sum_{d\mid n}\mu(d)p^{n/d}.
 $$
-
 
 **DRAFT**
 
