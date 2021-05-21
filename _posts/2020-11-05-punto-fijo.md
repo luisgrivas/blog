@@ -5,8 +5,6 @@ date:   2020-11-05 10:42:07 -0600
 categories: analisis-real 
 ---
 
-Siempre me han interesado los problemas de punto fijo. Este, aunque sencillo, no es la excepción.
-
 **Problema**. Sea $f: \mathbb{R} \rightarrow \mathbb{R} $ una función continua tal que $1$ aparece en  $f(x), f(f(x)), f(f(f(x))), \ldots $ para toda $x$ en $\mathbb{R}$. Demuestre que $ f(1) = 1$.
 
 Cuando tratamos temas de continuidad comúnmente utilizamos alguna derivación del [Teorema del Valor Intermedio](https://es.wikipedia.org/wiki/Teorema_del_valor_intermedio) . En este caso utilizaremos la siguiente proposición.

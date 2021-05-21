@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Polinomios irreducibles en Fp"
+title: "Polinomios irreducibles sobre GF(p)"
 date: 2021-04-15 14:30:00
 categories: posts
 tags: algebra, galois, polinomios 
@@ -56,7 +56,6 @@ $$
 (f \ast g) \ast k &=& \left( \sum_{d \mid n} f(d) g\left(\frac{n}{d}\right) \right) \ast k \\
 &=& \sum_{d^\prime \mid n} \left( \sum_{d \mid d^\prime} f(d) g\left(\frac{d^\prime}{d}\right) \right) k\left(\frac{n}{d^\prime}\right) \\
 &=& \sum_{abc = n} f(a)g(b)k(c).
-
 \end{eqnarray}
 $$
 De manera similar, encontramos que 
@@ -76,6 +75,8 @@ se le conoce como función identidad.
 *Demostración:* simple cálculo.
 
 **Lema.** Si $f$ es una función aritmética tal que $f(1) \neq 0$, entonces existe una función aritmética $f^{-1}$ llamada inversa de Dirichlet tal que $f \ast f^{-1} = f^{-1}\ast f = I$. Además, podemos encontrar una expresión para $f^{-1}$ dada por la siguiente relación de recurrencia:
+
+
 $$
 f^{-1}(1) = \frac{1}{f(1)}, \ \ \ \ f^{-1}(n) = \frac{-1}{f(1)} \sum_{d \mid n \\ d < n} f\left(\frac{n}{d}\right)f^{-1}(d) \ \ \text{ para } n > 1.
 $$
@@ -88,8 +89,6 @@ Del lema anterior se deduce  que la función aritmética $u$ definida como $u(n)
 
 
 **Teorema 3.** El conjunto de todas las funciones aritméticas $f$ tales que $f(1) \neq 0$ forman un grupo abeliano bajo el producto de Dirichlet. 
-
-
 
 **Teorema (Fórmula de inversión de Möbius)**  La ecuación 
 $$
