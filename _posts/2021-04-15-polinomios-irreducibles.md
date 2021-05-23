@@ -25,8 +25,9 @@ donde la sumatoria recorre todos los divisores $d$ de $n$.
 
 ## Producto de Dirichlet y fórmula de inversión de Möbius 
 
-**Definición.** Definimos a la función de Möbius $\mu$ como sigue:
+<img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/August_Ferdinand_M%C3%B6bius.png" style="zoom:35%;" />
 
+**Definición.** Definimos a la función de Möbius $\mu$ como sigue:
 
 $$
 \mu(1) = 1;
@@ -62,12 +63,16 @@ $$
 &=& \sum_{abc = n} f(a)g(b)k(c).
 \end{eqnarray}
 $$
+
+
 De manera similar, encontramos que 
 
 
 $$
 f \ast (g \ast k ) = \sum_{abc = n} f(a)g(b)k(c).
 $$
+
+
 El elemento identidad bajo el producto de Dirichlet es el siguiente.
 
 **Definición.** La función aritmética $I$ definida como
@@ -76,6 +81,8 @@ El elemento identidad bajo el producto de Dirichlet es el siguiente.
 $$
 I(n) = \cases{1 \ \ \ \text{si } n = 1,\\ 0 \ \ \ \text{si } n > 1.}
 $$
+
+
 se le conoce como función identidad.  
 
 **Lema.**  Para toda función aritmética $f$ se satisface que $f \ast I = I \ast f = f$.
@@ -105,7 +112,11 @@ Del lema anterior se deduce  que la función aritmética $u$ definida como $u(n)
 $$
 f(n) = \sum_{d \mid n} g(d),
 $$
+
+
 implica
+
+
 $$
 g(n) = \sum_{d \mid n} f(d) \mu\left(\frac{n}{d} \right).
 $$
@@ -113,16 +124,26 @@ $$
 
 *Demostración:* Si $f(n) = \sum_{d \mid n} g(d)$, entonces $f = g \ast u$. Multiplicando por $\mu$ obtenemos $f \ast \mu = (g \ast u) \ast \mu = g \ast (u \ast \mu) = g \ast I = g.$
 
+
+
 ### Resultado principal
 
 Observe que 
+
+
 $$
 p^n = \sum_{d \mid n} d N_n.
 $$
+
+
 Luego, por la fórmula de inversión de Möbius, obtenemos la expresión
+
+
 $$
 N_n = \frac{1}{n} \sum_{d\mid n}\mu(d)p^{n/d}.
 $$
+
+
 
 **DRAFT**
 
