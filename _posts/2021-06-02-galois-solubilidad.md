@@ -6,13 +6,15 @@ categories: posts
 tags: teoria-de-galois
 ---
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Evariste_galois.jpg" style="zoom:50%;" />
+
 
 En estas notas queremos probar el siguiente resultado debido a Galois:
 
 **Teorema.** Sea $f(x) \in k[x]$, donde $k$ es un campo y sea $E$ el campo de descomposición de $f$ sobre $k$. Si $f$ es soluble por radicales, entonces su grupo de Galois $Gal(E/k)$ es un grupo soluble.
 
 En lo siguiente definiremos los conceptos del teorema y demostraremos algunos lemas que utilizaremos en la prueba.
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Evariste_galois.jpg" style="zoom:35%;" />
 
 ### Campo de descomposición
 
