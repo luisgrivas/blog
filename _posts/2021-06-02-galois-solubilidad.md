@@ -6,7 +6,7 @@ categories: posts
 tags: teoria-de-galois
 ---
 
-![](https://commons.wikimedia.org/wiki/File:Evariste_Galois.jpg)
+<img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Evariste_galois.jpg" style="zoom:50%;" />
 
 En estas notas queremos probar el siguiente resultado debido a Galois:
 
@@ -35,8 +35,9 @@ Los ejemplos anteriores pueden indicarnos dos cosas: 1) qué el campo de descomp
 
 *Demostración:* Como $p$ es irreducible, el ideal $(p)$ es maximal en $k[x]$. Por tanto $K $ es un campo. El mapeo $a \mapsto a + (p)$ claramente es un isomorfismo $k \rightarrow k^\prime$. Esto muestra 1. 
 
-Para ver que $\beta$ es raíz de $p$, vea que si $p(x) = a_0 + a_1 x + \ldots + a_{n-1}x^{n-1} + x^n$, tenemos que 
+Para ver que $\beta$ es raíz de $p$, vea que si $p(x) = a_0 + a_1 x + \ldots + a_{n-1}x^{n-1} + x^n$, tenemos que
 
+ 
 
 $$
 \begin{eqnarray}
@@ -46,6 +47,8 @@ p(\beta) &=& (a_0 + (p)) + (a_1 + (p))(x + (p)) + \ldots + (1 +(p))(x + (p))^n\\
 &=& p(x) + (p) = (p). 
 \end{eqnarray}
 $$
+
+
 Como $(p)$ es el elemento cero en $K$, lo anterior muestra que $\beta$ es una raíz de $p$ en $K$. Esto muestra 2. $\blacksquare$
 
 En realidad esta proposición es mucho más potente. La dimensión de $K$ sobre $k$ es justamente $n$ el grado de $p$. Además, si otro polinomio $g$ tiene a $\beta$ como raíz, este es divisible por $p$. No obstante esto no lo utilizaremos en estas notas.
@@ -69,12 +72,14 @@ Puede suceder que al aplicar la cadena de extensiones en un polinomio particular
 Intuitivamente lo que queremos decir por *solubilidad por radicales* de un polinomio $f \in k[x]$, $k$ campo, es encontrar una fórmula que nos permita encontrar las raíces de $f$ en función de sus coeficientes. Por ejemplo la fórmula de segundo grado
 
 
+
 $$
-\frac{b \pm \sqrt{b^2 - 4ac} }{2a}
+x_r = \frac{b \pm \sqrt{b^2 - 4ac} }{2a}
 $$
 es un ejemplo ... Para traducir este objetivo en el lenguaje de campos es necesario introducir los siguientes conceptos.
 
 **Definición.** Una **extensión pura** de **tipo** $m$ es una extensión $k(u)/k$ en la que $u^m \in k$ para algún entero positivo $m$. Una extensión $K/k$ es una **extensión radical** si existe una torre de campos 
+
 
 
 $$
@@ -83,6 +88,7 @@ $$
 tal que $K_{i+1} / K_i$ es una extensión pura.
 
 **Definición.** Sea $f(x) \in k[x]$ con campo de descomposición $E$. Decimos que $f$ es **soluble por radicales** si exste una extensión radical 
+
 
 
 $$
@@ -102,11 +108,17 @@ Por ejemplo,  todo polinomio cuadrático $f(x) \in \mathbb Q[x]$ es soluble por 
 
 **Definición.** El **grupo de Galois** de una extensión de campos $E/k$, denotado como $Gal(E/k)$, es el conjunto de todos los automorfismo de $E$ que fijan a $k$. Si $f(x) \in k[x]$ y $E$ es el campo de descomposición de $f$ sobre $k$, entonces el **grupo de Galois** de $f$ sobre $k$ es $Gal(E/k)$.
 
+Es interesante determinar cómo actua el grupo de Galois de un polinomio $f$ sobre sus raíces .
+
+**Propisición 2.**  Sea $E/k$ el campo de descomposición de un polinomio $f \in k[x]$. Si $\sigma \in Gal(E/k)$, entonces $\sigma$ permuta las raíces de $f$.
+
+*Demostración:* Si z es una raíz de $f$, entonces $0 = \sigma(0) = \sigma(f(z)) = f (\sigma(z))$. $\blacksquare$
+
+
+
 Consideremos de nuevo el polinomio $f(x) = x^2 +1 \in \mathbb Q[x]$. Sabemos que el campo de descomposición de $f$ es $\mathbb Q(i)$. ¿Cuál es el grupo de Galois de $f$ ? Si $\sigma$ es un automorfismo distinto de la identidad que fija a $\mathbb Q$, implica que $\sigma(a) = a $.
 
-
-
-**Definición.** Una extensión de campos $E/k$ es normal si es el campo de descomposición de un polinomio en $k[x]$.
+**Definición.** Una extensión de campos $E/k$ es **normal** si es el campo de descomposición de un polinomio en $k[x]$.
 
 Por ejemplo, $\mathbb Q(i)/ \mathbb Q$ es una extensión normal, ya que es el campo de descomposición del polinomio $x^2 + 1 \in \mathbb Q[x]$.
 
