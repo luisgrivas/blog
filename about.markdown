@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Acerca de
-permalink: https://luisgrivas.github.io
+permalink: /about/
 ---
 
 Hola!
