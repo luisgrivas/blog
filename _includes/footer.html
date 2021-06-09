@@ -10,14 +10,11 @@
         <ul class="contact-list">
           <li class="p-name">
             {%- if site.author -%}
-              {{ site.author | escape }}
+              <a href="{{site.author}}">{{site.url}}</a>
             {%- else -%}
               {{ site.title | escape }}
             {%- endif -%}
             </li>
-            {%- if site.website -%}
-            <li><a href="luisgrivas.com">{{ site.base_url }}</a></li>
-            {%- endif -%}
             {%- if site.email -%}
             <li><a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a></li>
             {%- endif -%}
