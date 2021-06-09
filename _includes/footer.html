@@ -10,7 +10,7 @@
         <ul class="contact-list">
           <li class="p-name">
             {%- if site.author -%}
-              <a href="luisgrivas.com">{{ site.author | escape }}</a>
+              {{ site.author | escape }}
             {%- else -%}
               {{ site.title | escape }}
             {%- endif -%}
