@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Acerca de
-permalink: 
+permalink: /about/
 ---
 
 Hola!
