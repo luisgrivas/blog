@@ -7,7 +7,7 @@ categories: analisis-real
 
 **Problema**. Sea $f: \mathbb{R} \rightarrow \mathbb{R} $ una función continua tal que $1$ aparece en  $f(x), f(f(x)), f(f(f(x))), \ldots $ para toda $x$ en $\mathbb{R}$. Demuestre que $ f(1) = 1$.
 
-Cuando tratamos temas de continuidad comúnmente utilizamos alguna derivación del [Teorema del Valor Intermedio](https://es.wikipedia.org/wiki/Teorema_del_valor_intermedio) . En este caso utilizaremos la siguiente proposición.
+Cuando tratamos temas de continuidad comúnmente utilizamos alguna consecuencia del [Teorema del Valor Intermedio](https://es.wikipedia.org/wiki/Teorema_del_valor_intermedio) . En este caso utilizaremos la siguiente proposición.
 
 **Proposición**. Sean $ f, g: [a, b] \rightarrow \mathbb{R}$ funciones continuas tales que $f(a) \leq g(a)$ y  $f(b) \geq g(b)$. Entonces existe $x \in [a, b]$ tal que $ f(c) = g(c)$.
 
