@@ -69,19 +69,7 @@ Es claro que este producto es continuo por el [lema del pegado.](https://www.lui
 
 **Definición.** Un espacio $X$ es **simplemente conexo** si es conexo por caminos y si $\pi_1(X, x_0)$ es el grupo trivial para algún $x_0 \in X$.
 
-## Representantes circulares
-
-Considerese el círculo $S^1$ como un subconjunto de los complejos. Consideremos $\epsilon: I \rightarrow S^1$ el lazo dado definido por 
-$$
-\epsilon(s) = e^{2 \pi i s}.
-$$
-Este es un [mapeo cociente](https://www.luisgrivas.com/blog/posts/2021/01/18/topologia-cociente.html). Si $f: I \rightarrow X$ es un lazo en un espacio $X$, *it passes to the quotient*, de manera que existe un mapeo único $\tilde{f}: S^1 \rightarrow X$ tal que $\tilde{f} \circ \epsilon = f$.  Al mapeo $\tilde{f}$ se le llama **representante circular** de $f$. Conversamente, todo mapeo continuo $\tilde{f}$ de $S^1$ en $X$ es el representante circular de un mapeo $f = \tilde{f} \circ \epsilon$.
-
-**Teorema.** Sea $X$ un espacio topológico. Supóngase que $f: I \rightarrow X$ es un lazo basado en $p$ y $\tilde{f}: S^1 \rightarrow X$ es su representante circular. Entonces los siguientes enunciados son equivalentes:
-
-1. $f$ es un lazo homotópicamente nulo.
-2. $\tilde{f}$ es homotópico a un mapeo constante. 
-3. $\tilde{f}$ se puede extender a un mapeo continuo del disco unitario en $X$.
+---
 
 **DRAFT**
 

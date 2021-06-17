@@ -81,28 +81,6 @@ Una aplicación inmediata de esta proposición es la resolución del siguiente p
 
 $(\Rightarrow)$ Sea $\mathcal{R}$ el nilradical de $A$ y sea $f = \sum_{r=0}^n a_r x^r \in A[x]$ es una unidad. Entonces existe $g = \sum_{} \in A[x]$ tal que $fg = 1$.
 
-## El espectro primo de un anillo
-
-![](http://www.neverendingbooks.org/DATA2/mumforddrawing.jpg)
-
-Sea $A$ un anillo y sea $X$ el conjunto de todos los ideales primos de $A$. Para cada conjunto $E$ de $A$, sea $V(E)$ el conjunto de todos los ideales primos de $A$ que contienen a $E$. 
-
-**Lema.** Si $I$ es el ideal generado por $E$, entonces $V(E) = V(I)$. Además, $V(\{0\}) = X$ y $V(\{1\}) = \varnothing$.
-
-*Demostración:* Es claro que $
-
-**Lema**. Si $\langle E_i \rangle$ es una familia de subconjuntos de $A$, entonces
-$$
-V\left(\bigcup_{i} E_i\right) = \bigcap_{i} V(E_i).
-$$
-**Lema**. Si $I, J$ son ideales de $A$, entonces $V(I \cap J) = V(IJ) = V(I) \cup V(J)$.
-
-*Demostración:*
-
-**Teorema**. La familia $\tau := \{V(E) : E \subset A\}$ forma una topología en $X$. Esta topología se le conoce como **topología de Zariski**. Al espacio topológico $(X, \tau)$ se le llama **espectro primo** de $A$ y se denota por $Spec(A)$.
-
-**Ejemplo.** Sea 
-
 **DRAFT**
 
 **Referencias**

@@ -6,8 +6,6 @@ categories: posts
 tags: topologia
 ---
 
-# Topología Cociente
-
 **Definición**. Sean $X$ y $Y$ espacios topológicos; sea $p: X \rightarrow Y$ un mapeo sobreyectivo. El mapeo $p$ es un **mapeo cociente** si  $U \subset Y$ es abierto si y solo si $p^{-1}(U)$ es abierto en $X$. 
 
 Obsérvese que la definición anterior es más fuerte que continuidad. Otra forma de llamar a los mapeos cociente es **continuidad fuerte.**
