@@ -16,11 +16,10 @@ con $V_\alpha \in E$ y $p\mid_{V_\alpha}: V_\alpha \to U$ homeomorfismo para tod
 
 Existe una relación estrecha entre los espacios cubrientes y un espacio base y sus grupos fundamentales. Esto los discutiremos en notas posteriores. 
 
-**Ejemplo 1.** Sean $E = \mathbb R$ y $B = \mathbb S^1$, la círcunferencia en el plano complejo. El mapeo $\omega(s) = e^{2\pi i s}$ es un mapeo cubriente. Es claro que este mapeo es continuo y sobreyectivo. Para ver que es cubriente, considere los conjuntos $X_+ := \{z \in \mathbb S^1: Re(z) > 0 \}$, $X_{-} := \{z\in \mathbb S^1: Re(z) < 0 \}$, $Y_+ := \{z\in \mathbb S^1 : Im(z) > 0\}$ y $Y_{-}:= \{z \in \mathbb S^1: Im(z) < 0 \}$. Estos forman una cubierta abierta de $B$. Además, cada uno de estos es regular. Por ejemplo, 
-
+**Ejemplo 1.** Sean $E = \mathbb R$ y $B = \mathbb S^1$, la círcunferencia en el plano complejo. El mapeo $\epsilon(s) = e^{2\pi i s}$ es un mapeo cubriente. Es claro que este mapeo es continuo y sobreyectivo. Para ver que es cubriente, considere los conjuntos $X_+ := \{z \in \mathbb S^1: Re(z) > 0 \}$, $X_{-} := \{z\in \mathbb S^1: Re(z) < 0 \}$, $Y_+ := \{z\in \mathbb S^1 : Im(z) > 0\}$ y $Y_{-}:= \{z \in \mathbb S^1: Im(z) < 0 \}$. Estos forman una cubierta abierta de $B$. Además, cada uno de estos es regular. Por ejemplo, 
 
 $$
-\omega^{-1}(X_+) = \bigcup_{n\in \mathbb Z} (n -1/4, n + 1/4 ).
+\epsilon^{-1}(X_+) = \bigcup_{n\in \mathbb Z} (n -1/4, n + 1/4 ).
 $$
 Podemos imaginar que el mapeo $\omega$ enrolla a la recta real en forma de hélice sobre la circunferencia. 
 
@@ -48,7 +47,7 @@ El siguiente teorema nos indica cómo construir un mapeo cociente a partir de un
 
 *Demostración:* Sea $(b, b^\prime) $ un elemento de $B \times B^\prime$. Sean $U \subset B$ y $U^\prime \subset B^\prime$ vecindades regulares de $b$ y $b^\prime$ respectivamente. Si $\{V_\alpha\}$ son las hojas de $U$ y $\{V^\prime_\beta\}$  son las hojas de $U^\prime$, entonces $(p\times p^\prime)^{-1} (U \times U^\prime)$ es igual a la unión de todos los $V_\alpha \times V^\prime_\beta$. Es claro que esta es una unión disjunta de abiertos en la topología producto y por tanto,  $U \times U^\prime$ es una vecindad regular de $(b, b^\prime)$. $\blacksquare$
 
-**Ejemplo 4.** Por el Teorema 2, si $\omega$ es la función del Ejemplo 1, entonces $\omega \times \omega: \mathbb R^2 \to S^1 \times S^1 = T$ es un mapeo cubriente del toro. 
+**Ejemplo 4.** Por el Teorema 2, si $\omega$ es la función del Ejemplo 1, entonces $\epsilon \times \epsilon: \mathbb R^2 \to S^1 \times S^1 = T$ es un mapeo cubriente del toro. 
 
 **Proposición 1.** Un mapeo cubriente inyectivo es un homemomorfismo.
 

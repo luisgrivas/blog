@@ -20,7 +20,7 @@ Como cabe esparar, no todo espacio $X$ tiene un cubriente universal. Es necesari
 
 **Teorema (Existencia del Espacio Cubriente Universal).** Todo espacio topológico arco-conexo, localmente arco-conexo y localmente simplemente conexo tiene un espacio cubriente universal. 
 
-La demostración de este teorema es un tanto rebuscada y realmente, en mi opinión, es solo valioso tener una idea general de la construcción del cubriente universal. Es por esto que solo enunciaremos las ideas principales de su construcción [^1].
+La demostración de este teorema es un tanto rebuscada y realmente, en mi opinión, es solo valioso recordad que la construcción del cubriente universal se realiza a partir del espacio base. En lo siguiente, solo daré las ideas generales de su demostración. [^1]
 
 *Bosquejo de demostración:* Sea $X$ un espacio que satisface las hipótesis del teorema y sea $x_0 \in X $ un punto base. Definamos $\widetilde{X}$ como el conjunto de todas las clases de caminos en $X$ que comienzan en $x_0$. Sea $p: \widetilde{X} \rightarrow X$ el mapeo definido como $p([f]) = f(1)$. El plan es demostrar que $q$ es un mapeo cubriente y que $\widetilde{X}$ es simplemente conexo.
 
@@ -47,15 +47,15 @@ Dado que $f_t(0) = f(0) = x_0$ y $f_t(1) = f(t)$, $f_t$ es un camino de $x_0$ ha
 $$
 \widetilde f(t) = [f_t].
 $$
-Observe que $\widetilde f(0) = [c_{x_0}]$ y $\widetilde f(1) = [f ]$. Si se demuestra que $\widetilde f$ es un mapeo continuo, habremos encontrado un camino de $[c_{x_0}]$ a $[f]$. 
+Observe que $\widetilde f(0) = [c_{x_0}]$ y $\widetilde f(1) = [f ]$. Si se demuestra que $\widetilde f$ es un mapeo continuo, habremos encontrado un camino de $[c_{x_0}]$ a $[f]$. Consecuentemente, habremos
 
 Es claro que $p$ es sobreyectiva, pues $X$ es arco-conexo. 
 
 ...
 
-**Ejemplo 1.** Es claro que el espacio $\mathbb S^1$ es arco-conexo y localmente arco-conexo. Una base para la topología de $\mathbb S^1$ (que es la de subespacio considerando a $\mathbb S^1$ como subconjunto de $\mathbb C$) es el conjunto de todos los arcos abiertos. Estos son homeomorfos al conjunto $\mathbb R$,  que es simplemente conexo. Por tanto, $\mathbb S^1$ es localmente simplemente conexo. Así pues, el teorema anterior nos asegura que $\mathbb S^1$ tiene un cubriente universal. Recordando las [notas sobre mapeos cubrientes](https://www.luisgrivas.com/blog/posts/2021/03/04/espacios-cubrientes.html), el mapeo $\omega: \mathbb R \to \mathbb S^1$ es un mapeo cubriente. Como $\mathbb R$ es simplemente conexo, este es el cubriente universal de $\mathbb S^1$.
+**Ejemplo 1.** Es claro que el espacio $\mathbb S^1$ es arco-conexo y localmente arco-conexo. Una base para la topología de $\mathbb S^1$ (que es la de subespacio considerando a $\mathbb S^1$ como subconjunto de $\mathbb C$) es el conjunto de todos los arcos abiertos. Estos son homeomorfos al conjunto $\mathbb R$,  que es simplemente conexo. Por tanto, $\mathbb S^1$ es localmente simplemente conexo. Así pues, el teorema anterior nos asegura que $\mathbb S^1$ tiene un cubriente universal. Recordando las [notas sobre mapeos cubrientes](https://www.luisgrivas.com/blog/posts/2021/03/04/espacios-cubrientes.html), el mapeo $\epsilon: \mathbb R \to \mathbb S^1$ es un mapeo cubriente. Como $\mathbb R$ es simplemente conexo, este es el cubriente universal de $\mathbb S^1$.
 
-**Ejemplo 2.** El mapeo $\omega \times \omega: \mathbb R^2 \to T$ es un mapeo cubriente. El espacio $\mathbb R^2 $es simplemente conexo, por lo que es el cubriente universal del toro $T$.
+**Ejemplo 2.** El mapeo $\epsilon \times \epsilon: \mathbb R^2 \to T$ es un mapeo cubriente. El espacio $\mathbb R^2 $es simplemente conexo, por lo que es el cubriente universal del toro $T$.
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/a/aa/Torus-triang.png" style="zoom:25%;" />
 
@@ -68,6 +68,8 @@ Es claro que $p$ es sobreyectiva, pues $X$ es arco-conexo.
 El cubriente universal de $\mathbb S^1 \vee \mathbb S^1$ se aprecia en la figura de abajo.
 
 <img src="/blog/assets/images/ucwedge.png" style="zoom:60%;" /> 
+
+**Proposición.** Si $X$ tiene un cubriente universal, entonces este es semilocalmente simplemente conexo.
 
 ---
 

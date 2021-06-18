@@ -6,17 +6,19 @@ categories: posts
 tags: topologia-algebraica
 ---
 
-La teoría de [espacios cubrientes](https://www.luisgrivas.com/blog/posts/2021/03/04/espacios-cubrientes.html) adquiere su verdadera relevancia cuando desarrollamos la teoría de levantamientos. En estas notas expondremos los principales teoremas de levantamientos y como consecuencia daremos una primera aplicación: calcular el grupo fundamental de $\mathbb S^1$.
+La teoría de [espacios cubrientes](https://www.luisgrivas.com/blog/posts/2021/03/04/espacios-cubrientes.html) en conjunto con la teoría de levantamientos nos permite estudiar el grupo fundamental del espacio base. En estas notas veremos los principales teoremas de levantamientos y como consecuencia de estos daremos una primera aplicación: calcular el grupo fundamental de $\mathbb S^1$. 
 
 **Definición.** Sean $q: E \rightarrow X$ un mapeo cubriente y $\phi: Y \rightarrow X$ un mapeo continuo. Un **levantamiento de** $\phi$ es un mapeo continuo $\widetilde \phi: Y \rightarrow E$ tal que $q \circ \widetilde \phi = \phi$. En otras palabras, el siguiente diagrama conmuta:
 
 ![](/blog/assets/images/levantamiento.png)
 
+Intuitivamente hablando, un espacio cubriente es enrollado en el espacio base mediante el mapeo cubriente. Así pues, si tenemos un mapeo continuo sobre el espacio base, un levantamiento son las *instrucciones* de enrollamiento de este este mapeo.
+
 **Teorema 1 (Unicidad de levantamiento).** Sea $q: E \rightarrow X$ un mapeo cubriente. Suponga que $Y$ es conexo, $\phi: Y \rightarrow X$ es un mapeo continuo y que $\widetilde\phi_1, \widetilde\phi_2: Y \rightarrow E$ son levantamientos de $\phi$ que coinciden en un punto de $Y$. Entonces $\widetilde \phi_1$ es igual a $\widetilde \phi_2$.
 
-*Demostración:* Sea $A = \{y\in Y: \widetilde \phi_1 (y) = \widetilde \phi_2(y) \}$. Demostraremos que $A$ es abierto y cerrado. Puesto que $Y$ es conexo y por hipótesis $A\neq \emptyset$, esto implicaría que $A = Y$.  
+*Demostración:* Sea $A = \{y\in Y: \widetilde \phi_1 (y) = \widetilde \phi_2(y) \}$. Puesto que $Y$ es conexo y por hipótesis $A\neq \emptyset$, si demostramos que $A$ es abierto y cerrado, implicaría que $A = Y$.  
 
-Primero, sea $a \in A$. Entonces $e = \widetilde \phi_1(a) = \widetilde \phi_2 (a)$. Hagamos $x = q(e) = q(e)$. Sea $U$ la componente de $q^{-1}(V)$
+Demostremos primero que $A$ es abierto. Si $a \in A$, entonces $e = \widetilde \phi_1(a) = \widetilde \phi_2 (a)$. Hagamos $x = q(e)$. Sea $U$ 
 
 
 
@@ -51,6 +53,8 @@ Primero, sea $a \in A$. Entonces $e = \widetilde \phi_1(a) = \widetilde \phi_2 (
 **Teorema 4 (de inyectividad).**. Sea $q: E \rightarrow X$ un mapeo cubriente. Para cualquier punto $e \in E$, el homomorfismo inducido $q_\ast: \pi_1(E, e) \rightarrow \pi_1(X, q(e))$ es inyectivo. El subgrupo imagen $q_\ast \pi_1(E, e)$ en $\pi_1(X, x_0)$ consiste en todos los lazos basados en $q(e)$ cuyos levantamientos en $E$ que comienzan en $e$ son lazos.
 
 *Demostración:* Sea $[f] \in Ker(q_\ast)$. Entonces $q \circ f \sim c_{q(e)}$. Por el Teorema de Monodromia, los levantamientos $\widetilde{q \circ f}$ y $\widetilde{c_{q(e)}}$ son homotópicos. Ahora bien, $f$ es el levantamiento de $q \circ f$ y $c_e$ es el levantamiento de $c_{q(e)}$. Por lo anterior, $f \sim c_e$. Por tanto, el único elemento en el kernel de $q_\ast$ es $[c_e]$.  Esto implica que $q_\ast$ es inyectivo. $\blacksquare$
+
+**Ejemplo 1**. Consideremos el mapeo cubriente $q_n: \mathbb S^1 \to \mathbb S^1$ definido como $q_n(z) = z^n$, con $n \in \mathbb N$. Por el Teorema 4, $q_{n \ \ast}(\pi_1(\mathbb S^1, z_0))$ es un subgrupo de $\pi_1(\mathbb S^1, x_0)$. Como veremos más adelante, el grupo fundamental de $\mathbb S^1$ es un grupo cíclico generado por un solo elemento. Luego, si $\omega$ es el generador de $\pi_1(\mathbb S^1, z_0)$,  $q_{n \ \ast} \pi_1(\mathbb S^1, z_0)$ es $\langle [\omega^n] \rangle $. 
 
 **Teorema 5 (Criterio de levantamiento)**. Sea $q: E \rightarrow X$ un mapeo cubriente. Sea $Y$ un espacio conexo y localmente conexo por caminos y sea $\phi: Y \rightarrow X$ un mapeo continuo. Dados cualesquiera dos puntos $y_0\in Y$ y $e_0 \in E$ tales que $q(e_0) = \phi(y_0)$, el mapeo $\phi$ tiene un levantamiento $\widetilde{\phi}: Y \rightarrow E$ satisfaciendo que $\widetilde{\phi}(y_0) = e_0$ si y solo si el subgrupo $\phi_\ast \pi_1(Y, y_0)$ de $\pi_1(X, \phi(y_0))$ está contenido en $q_\ast \pi_1(E, e_0)$.
 
@@ -91,11 +95,13 @@ De este teorema tenemos algunos resultados indemdiatos.
 
 **Corolario 2.** Si $X = \mathbb S^1 \times \cdots \times \mathbb S^1$, entonces $\pi_1(T^n, x_0) \simeq \mathbb Z^n$. En particular, el toro tiene grupo fundamental isomorfo a $\mathbb Z^2$.
 
-**Corolario 3.** El espacio punteado $\mathbb R^2 - \{\pmb{0} \}$ tiene grupo fundamental isomorfo a $\mathbb Z$.
+Estos resultados nos permiten demostrar algo que con las herramientas previas no era posible.
+
+**Corolario 3.** $\mathbb S^n$ no es homeomorfo a $T^n$, para $n > 2$.
+
+**Corolario 4.** El espacio punteado $\mathbb R^2 - \{\pmb{0} \}$ tiene grupo fundamental isomorfo a $\mathbb Z$.
 
 *Demostración.* Observe que el mapeo $r: \mathbb R^2 - \{\pmb 0\} \to \mathbb S^1$ definido como $r(x) = \frac{x}{\mid x \mid}$ es un retracto fuerte por deformación. Entonces $\pi_1(\mathbb R^2 - \{\pmb 0\}, x_0) = \pi_1(\mathbb S^1, 1) \simeq \mathbb Z$.
-
-**Ejemplo**. Consideremos el mapeo cubriente $q_n: S^1 \to S^1$ definido como $q_n(z) = z^n$, con $n \in \mathbb N$. Sea $[\gamma]$ el generador del dominio de $q_{n \ \ast}$ y sea $[\omega]$ el generador del rango de $q_{n \ \ast}$. Si $[f] \in \langle [\gamma] \rangle$, entonces $[f] = [\gamma]^m$ para algún $m\in \mathbb Z$. Aplicando $q_{n \ \ast}$, obtenemos que $q_{n \ \ast}([f]) = q_{n \ \ast}([\gamma]^m) = [\gamma^n]^m = [\gamma^{nm}]$. 
 
 ...
 
