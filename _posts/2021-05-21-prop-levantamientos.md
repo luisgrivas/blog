@@ -52,11 +52,9 @@ Primero, sea $a \in A$. Entonces $e = \widetilde \phi_1(a) = \widetilde \phi_2 (
 
 *Demostración:* Sea $[f] \in Ker(q_\ast)$. Entonces $q \circ f \sim c_{q(e)}$. Por el Teorema de Monodromia, los levantamientos $\widetilde{q \circ f}$ y $\widetilde{c_{q(e)}}$ son homotópicos. Ahora bien, $f$ es el levantamiento de $q \circ f$ y $c_e$ es el levantamiento de $c_{q(e)}$. Por lo anterior, $f \sim c_e$. Por tanto, el único elemento en el kernel de $q_\ast$ es $[c_e]$.  Esto implica que $q_\ast$ es inyectivo. $\blacksquare$
 
-Consideremos el mapeo cubriente $q_n: S^1 \to S^1$ definido como $q_n(z) = z^n$, con $n \in \mathbb N$. Sea $y_0$ un punto en el espacio cubriente y $z_0$ un punto en el espacio base. Si $[f] \in \ker {q_{n}}_\ast$, entonces $[q_n \circ f] = [c_{z_0}]$. Por lo que $c_{z_0} \sim q_n \circ f$.
+Consideremos el mapeo cubriente $q_n: S^1 \to S^1$ definido como $q_n(z) = z^n$, con $n \in \mathbb N$. Sea $y_0$ un punto en el espacio cubriente y $z_0$ un punto en el espacio base. Si $[f] \in \ker {q_{n}}_\ast$, entonces $[q_n \circ f] = [c_{z_0}]$, es decir, $c_{z_0} \sim q_n \circ f$.
 
-
-
-Como sabemos,  $\pi_1(S^1, y_0) \simeq \langle [\omega]\rangle$, para algún lazo $\omega $ en $\mathbb S^1$ basado en $y_0$. Por definición, $(q_n)_\ast ([\omega]) = [q_n \circ \omega] = q_n(\omega) = [\omega^n] = [\gamma]^n.$ Así pues, $(p_n)_\ast \pi_1(\mathcal S^1, y_0) \simeq$
+...
 
 
 
@@ -79,6 +77,8 @@ e^{2\pi i \widetilde \alpha(t)} - e^{2\pi i \widetilde \alpha^\prime(t)}=0 &\iff
 &\iff& e^{2\pi i  \ [\widetilde \alpha^\prime(t) -\widetilde \alpha(t)]} = 1\\ &\iff& \widetilde \alpha^\prime(t) -\widetilde \alpha(t) \in \mathbb Z.
 \end{eqnarray}
 $$
+
+
 Ya que $\widetilde \alpha^\prime(t) -\widetilde \alpha(t)$ es una función continua de $I$ en $\mathbb Z$, tenemos que $\widetilde \alpha(t) = \widetilde \alpha^\prime(t) + K$, para alguna $K\in \mathbb Z$. De aquí, vemos que $\widetilde \alpha(1) - \widetilde \alpha (0) = \widetilde \alpha^\prime(1) - \widetilde \alpha^\prime (0)$. Lo anterior muestra que el número de enrollamiento es el mismo para cualquier levantamiento de $\alpha$. Denotemos al número de enrollamiento de un lazo $\alpha$ en $\mathbb S^1$ como $E(\alpha)$.
 
 Intuitivamente, el número de enrollamiento nos indica qué tantas veces le da la vuelta a $\mathbb S^1$ un determinado lazo. Cabe esperar que dos lazos son homotópicos si y solo si tienen el mismo número de enrollamiento. Esto lo demostraremos a continuación.
@@ -95,13 +95,11 @@ Si $f$ es un lazo en $\mathbb S^1$ basado en $1$ con $E(f) = n$, entonces $f \si
 
 De este teorema tenemos algunos resultados indemdiatos. 
 
-**Corolario.** Si $X = \mathbb S^1 \times \cdots \times \mathbb S^1$, entonces $\pi_1(T^n, x_0) \simeq \mathbb Z^n$. En particular, el toro tiene grupo fundamental isomorfo a $\mathbb Z^2$.
+**Corolario 2.** Si $X = \mathbb S^1 \times \cdots \times \mathbb S^1$, entonces $\pi_1(T^n, x_0) \simeq \mathbb Z^n$. En particular, el toro tiene grupo fundamental isomorfo a $\mathbb Z^2$.
 
-**Corolario.** El espacio punteado $\mathbb R^2 - \{\bold{0} \}$ tiene grupo fundamental isomorfo a $\mathbb Z$.
+**Corolario 3.** El espacio punteado $\mathbb R^2 - \{\pmb{0} \}$ tiene grupo fundamental isomorfo a $\mathbb Z$.
 
-*Demostración.* Observe que el mapeo $r: \mathbb R^2 - \{\bold 0\} \to \mathbb S^1$, definido como $r(x) = \frac{x}{\mid x \mid}$ es un retracto fuerte por deformación. Entonces $\pi_1(\mathbb R^2 - \{\bold 0\}, x_0) = \pi_1(\mathbb S^1, 1) \simeq \mathbb Z$.
-
-
+*Demostración.* Observe que el mapeo $r: \mathbb R^2 - \{\pmb 0\} \to \mathbb S^1$, definido como $r(x) = \frac{x}{\mid x \mid}$ es un retracto fuerte por deformación. Entonces $\pi_1(\mathbb R^2 - \{\pmb 0\}, x_0) = \pi_1(\mathbb S^1, 1) \simeq \mathbb Z$.
 
 
 
