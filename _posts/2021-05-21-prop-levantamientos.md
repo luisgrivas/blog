@@ -52,12 +52,6 @@ Primero, sea $a \in A$. Entonces $e = \widetilde \phi_1(a) = \widetilde \phi_2 (
 
 *Demostración:* Sea $[f] \in Ker(q_\ast)$. Entonces $q \circ f \sim c_{q(e)}$. Por el Teorema de Monodromia, los levantamientos $\widetilde{q \circ f}$ y $\widetilde{c_{q(e)}}$ son homotópicos. Ahora bien, $f$ es el levantamiento de $q \circ f$ y $c_e$ es el levantamiento de $c_{q(e)}$. Por lo anterior, $f \sim c_e$. Por tanto, el único elemento en el kernel de $q_\ast$ es $[c_e]$.  Esto implica que $q_\ast$ es inyectivo. $\blacksquare$
 
-Consideremos el mapeo cubriente $q_n: S^1 \to S^1$ definido como $q_n(z) = z^n$, con $n \in \mathbb N$. Sea $y_0$ un punto en el espacio cubriente y $z_0$ un punto en el espacio base. Si $[f]$ es un elemento del kernel de $(q_{n})_{\ast}$, entonces $[q_n \circ f] = [c_{z_0}]$, es decir, $c_{z_0} \sim q_n \circ f$.
-
-...
-
-
-
 **Teorema 5 (Criterio de levantamiento)**. Sea $q: E \rightarrow X$ un mapeo cubriente. Sea $Y$ un espacio conexo y localmente conexo por caminos y sea $\phi: Y \rightarrow X$ un mapeo continuo. Dados cualesquiera dos puntos $y_0\in Y$ y $e_0 \in E$ tales que $q(e_0) = \phi(y_0)$, el mapeo $\phi$ tiene un levantamiento $\widetilde{\phi}: Y \rightarrow E$ satisfaciendo que $\widetilde{\phi}(y_0) = e_0$ si y solo si el subgrupo $\phi_\ast \pi_1(Y, y_0)$ de $\pi_1(X, \phi(y_0))$ está contenido en $q_\ast \pi_1(E, e_0)$.
 
 *Demostración:* Si $\widetilde \phi$ es un levantamiento de $\phi$ tal que $\widetilde \phi(y_0) = e_0$, entonces $\phi_\ast \pi_1(Y, y_0) = q_\ast \circ \widetilde \phi_\ast \pi_1(Y, y_0) \subset q_\ast \pi_1(E, e_0)$.
@@ -66,7 +60,7 @@ Definamos el mapeo $\widetilde \phi: Y \rightarrow E$  como $\widetilde \phi (y)
 
 
 
-### Grupo fundamental de $\mathbb S^1$
+### El grupo fundamental de $\mathbb S^1$
 
 En esta sección expondremos que los teoremas anteriores tienen la sufiente potencia para derivar un resultado no trivial: el grupo fundamental de $\mathbb S^1$. Para esto, sea $\epsilon: \mathbb R \to \mathbb S^1$ el mapeo definido como $\epsilon(t) = e^{2\pi i t}$. En [notas anteriores](https://www.luisgrivas.com/blog/posts/2021/03/04/espacios-cubrientes.html) se demostró que este es un mapeo cubriente. Sea $\alpha$ un lazo en $\mathbb S^1$ basado en $1$. Si $\widetilde \alpha$ es un levantamiento de $\alpha$, como $\alpha$ es un lazo, entonces $\widetilde \alpha(0), \widetilde \alpha(1) \in \epsilon^{-1}(1) = \mathbb Z$, por lo que $\widetilde \alpha(1) - \widetilde \alpha(0)$ siempre es un entero. A este entero le llamaremos *el* **número de enrollamiento** de $\alpha$. Este entero es independiente del levantamiento seleccionado. Sea $\widetilde \alpha^\prime$ otro levantamiento de $\alpha$. Como $\epsilon(\widetilde \alpha (t)) = \alpha(t) = \epsilon(\widetilde \alpha^\prime(t))$, entonces 
 
@@ -89,7 +83,7 @@ Con lo anterior, tenemos todo lo necesario para demostrar el siguiente teorema.
 
 **Teorema 6.** El grupo fundamental de $\mathbb S^1$ es un grupo cíclico infinito generado por $[\omega]$, donde $\omega: I \to \mathbb S^1$ es el lazo definido como $\omega(t) = e^{2\pi i t}.$ 
 
-*Demostración:* Solo tenemos que probar que $E(\omega^n) = n,$ donde $\omega^n = e^{2 \pi i n t}$ y $n \in \mathbb Z$. Observe que $\widetilde \omega^n: I \to \mathbb R$ definido como $\widetilde \omega^n(t) = nt$, es un levantamiento de $\omega^n$: $\epsilon(\widetilde \omega^n(t)) = e^{2 \pi i \widetilde \omega^n(t)} = e^{2\pi i nt} = \omega^n$. Entonces, $E(\omega^n) = \widetilde \omega^n (1) - \widetilde \omega^n(0) = n $. 
+*Demostración:* Solo tenemos que probar que $E(\omega^n) = n,$ donde $\omega^n = e^{2 \pi i n t}$ y $n \in \mathbb Z$. Observe que $\widetilde \omega^n: I \to \mathbb R$ definido como $\widetilde \omega^n(t) = nt$, es un levantamiento de $\omega^n$: $\epsilon(\widetilde \omega^n(t)) = e^{2 \pi i \widetilde \omega^n(t)} = e^{2\pi i nt} = \omega^n$. Entonces $E(\omega^n) = \widetilde \omega^n (1) - \widetilde \omega^n(0) = n $. 
 
 Si $f$ es un lazo en $\mathbb S^1$ basado en $1$ con $E(f) = n$, entonces $f \sim \omega^n$. Por lo que $[f] = [\omega^n] = [\omega]^n$. Esto muestra que $\pi_1(\mathbb S^1, 1) = \langle [\omega] \rangle$. $\blacksquare$
 
@@ -99,7 +93,11 @@ De este teorema tenemos algunos resultados indemdiatos.
 
 **Corolario 3.** El espacio punteado $\mathbb R^2 - \{\pmb{0} \}$ tiene grupo fundamental isomorfo a $\mathbb Z$.
 
-*Demostración.* Observe que el mapeo $r: \mathbb R^2 - \{\pmb 0\} \to \mathbb S^1$, definido como $r(x) = \frac{x}{\mid x \mid}$ es un retracto fuerte por deformación. Entonces $\pi_1(\mathbb R^2 - \{\pmb 0\}, x_0) = \pi_1(\mathbb S^1, 1) \simeq \mathbb Z$.
+*Demostración.* Observe que el mapeo $r: \mathbb R^2 - \{\pmb 0\} \to \mathbb S^1$ definido como $r(x) = \frac{x}{\mid x \mid}$ es un retracto fuerte por deformación. Entonces $\pi_1(\mathbb R^2 - \{\pmb 0\}, x_0) = \pi_1(\mathbb S^1, 1) \simeq \mathbb Z$.
+
+**Ejemplo**. Consideremos el mapeo cubriente $q_n: S^1 \to S^1$ definido como $q_n(z) = z^n$, con $n \in \mathbb N$. Sea $[\gamma]$ el generador del dominio de $q_{n \ \ast}$ y sea $[\omega]$ el generador del rango de $q_{n \ \ast}$. Si $[f] \in \langle [\gamma] \rangle$, entonces $[f] = [\gamma]^m$ para algún $m\in \mathbb Z$. Aplicando $q_{n \ \ast}$, obtenemos que $q_{n \ \ast}([f]) = q_{n \ \ast}([\gamma]^m) = [\gamma^n]^m = [\gamma^{nm}]$. 
+
+...
 
 
 
