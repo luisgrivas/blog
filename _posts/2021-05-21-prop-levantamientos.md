@@ -52,7 +52,7 @@ Primero, sea $a \in A$. Entonces $e = \widetilde \phi_1(a) = \widetilde \phi_2 (
 
 *Demostración:* Sea $[f] \in Ker(q_\ast)$. Entonces $q \circ f \sim c_{q(e)}$. Por el Teorema de Monodromia, los levantamientos $\widetilde{q \circ f}$ y $\widetilde{c_{q(e)}}$ son homotópicos. Ahora bien, $f$ es el levantamiento de $q \circ f$ y $c_e$ es el levantamiento de $c_{q(e)}$. Por lo anterior, $f \sim c_e$. Por tanto, el único elemento en el kernel de $q_\ast$ es $[c_e]$.  Esto implica que $q_\ast$ es inyectivo. $\blacksquare$
 
-Consideremos el mapeo cubriente $q_n: S^1 \to S^1$ definido como $q_n(z) = z^n$, con $n \in \mathbb N$. Sea $y_0$ un punto en el espacio cubriente y $z_0$ un punto en el espacio base. Si $[f] \in \ker {q_{n}}_\ast$, entonces $[q_n \circ f] = [c_{z_0}]$, es decir, $c_{z_0} \sim q_n \circ f$.
+Consideremos el mapeo cubriente $q_n: S^1 \to S^1$ definido como $q_n(z) = z^n$, con $n \in \mathbb N$. Sea $y_0$ un punto en el espacio cubriente y $z_0$ un punto en el espacio base. Si $[f]$ es un elemento del kernel de $(q_{n})_{\ast}$, entonces $[q_n \circ f] = [c_{z_0}]$, es decir, $c_{z_0} \sim q_n \circ f$.
 
 ...
 
