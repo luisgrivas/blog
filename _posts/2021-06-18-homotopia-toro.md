@@ -8,12 +8,12 @@ tags: homotopia, topología-algebraica
 
 En el libro *Introduction to Topological Manifolds* de John M. Lee aparece el siguiente problema.
 
-Demuestre que para todo mapeo continuo $\phi: T^2 \to T^2$, existe una matriz $D(\phi)$ de $2 \times 2$ con entradas en $\mathbb Z$ con las siguientes propiedades:
-
-1. Dos mapeos continuos $\phi$ y $\psi$ son homotópicos si y solo si $D(\phi) = D(\psi)$.
-2. $D(\psi \circ \phi)$ es igual al producto $D(\psi) D(\phi)$.
-3. Para toda matriz $E$ de $2 \times 2$ con entradas en $\mathbb Z$ existe un mapeo continuo $\psi: T^2 \to T^2$ tal que $D(\phi) = E$.
-4. $\phi$ es homotópico a un homeomorfismo si y solo si $D(\phi)$ es invertible sobre los enteros.
+> Demuestre que para todo mapeo continuo $\phi: T^2 \to T^2$, existe una matriz $D(\phi)$ de $2 \times 2$ con entradas en $\mathbb Z$ con las siguientes propiedades:
+>
+> 1. Dos mapeos continuos $\phi$ y $\psi$ son homotópicos si y solo si $D(\phi) = D(\psi)$.
+> 2. $D(\psi \circ \phi)$ es igual al producto $D(\psi) D(\phi)$.
+> 3. Para toda matriz $E$ de $2 \times 2$ con entradas en $\mathbb Z$ existe un mapeo continuo $\psi: T^2 \to T^2$ tal que $D(\phi) = E$.
+> 4. $\phi$ es homotópico a un homeomorfismo si y solo si $D(\phi)$ es invertible sobre los enteros.
 
 Este problema es interesante ya que establece una clasificación completa de mapeos continuos del toro en el toro, salvo homotopía. 
 
@@ -26,23 +26,23 @@ $$
 $$
 
 
-Si $\phi: T^2 \to T^2$ es un mapeo continuo, entonces podemos escribir $\phi(s, t) = (\phi_1(s, t), \phi_2(s, t))$ con $\phi_1, \phi_2: T^2 \to \mathbb S^1$ mapeos continuos. La composición $\phi_i \circ \omega_j$ puede ser vista como un lazo en $\mathbb S^1$. De esta manera, podemos definir el [número de enrollamiento](https://www.luisgrivas.com/blog/posts/2021/05/21/prop-levantamientos.html), $E(\phi_i \circ \omega_j)$, del mapeo $\phi_i \circ \omega_j$ para toda $i$ y $j$. Con esto, definimos la matriz asociada $D(\phi) = (a_{ij})$ al mapeo $\phi$ como 
+Si $\phi: T^2 \to T^2$ es un mapeo continuo, entonces podemos escribir $\phi(s, t) = (\phi_1(s, t), \phi_2(s, t))$ con $\phi_1, \phi_2: T^2 \to \mathbb S^1$ mapeos continuos. Entonces la composición $\phi_i \circ \omega_j$ es un lazo en $\mathbb S^1$. Todo lazo en $\mathbb S^1$ tiene un entero asociado llamado el [número de enrollamiento](https://www.luisgrivas.com/blog/posts/2021/05/21/prop-levantamientos.html), que intuitivamente nos indica el número de veces que el lazo "da vuelta" a $\mathbb S^1$. Así pues, denotemos por $E(\phi_i \circ \omega_j)$, al número de enrollamiento del mapeo $\phi_i \circ \omega_j$ para toda $i$ y $j$. La matriz asociada $D(\phi) = (a_{ij})$,  al mapeo $\phi$, la definimos como
 $$
 a_{ij} = E(\phi_i \circ \omega_j).
 $$
-Es claro que esta matriz es  $2 \times 2$ con entradas en $\mathbb Z$. Procedamos a resolver cada uno de los puntos mencionados. En lo siguiente, los mapeos $\phi, \psi: T^2 \to T^2$ son continuos.
+Por definición, $D(\phi)$ es una matriz  $2 \times 2$ con entradas en $\mathbb Z$. Procedamos a resolver cada uno de los puntos mencionados. En lo siguiente, los mapeos $\phi, \psi: T^2 \to T^2$ son continuos.
 
 
 
 #### Propiedad 1
 
-Sean $\phi $ y $\psi$ con homotópicos. Entonces $\phi_i $ es homotópico a $\psi_i$ para $i = 1, 2$. Esto implica que $\phi_i \circ \omega_j$ es homotópico a $\psi_i \circ \omega_j$. Luego, los lazos satisfacen que $E(\phi_i \circ \omega_j) = E(\psi_i \circ \omega_j)$. Por tanto $D(\phi) = D(\psi)$. El converso es cierto ya que las implicaciones anteriores son bicondicionales.
+Sean $\phi $ y $\psi$ con homotópicos. Entonces $\phi_i $ es homotópico a $\psi_i$ para $i = 1, 2$. Esto implica que $\phi_i \circ \omega_j$ es homotópico a $\psi_i \circ \omega_j$. Luego, los lazos satisfacen que $E(\phi_i \circ \omega_j) = E(\psi_i \circ \omega_j)$. Por tanto $D(\phi) = D(\psi)$. El converso es cierto ya que las implicaciones anteriores son bicondicionales [^1].
 
 
 
 #### Propiedad 2
 
-
+Si  $D(\psi ) = (a_{ij})$ y $D(\phi) = (b_{ij})$, entonces $D(\psi) D(\phi) = (c_{ij})$ con $c_{ij} = a_{i1} b_{1j} + a_{i2}b_{2j}.$ Por otro lado, si $D(\psi \circ \phi) = (d_{ij})$, por definición tenemos que $d_{ij} = E( (\psi \circ \phi)_i \circ \omega_j)$. Observe que, por definición,  $(\psi \circ \phi)_i = \psi_i(\phi(s, t))= \psi_i(\phi_1(s,t), \phi_2(s, t))$.
 
 #### Propiedad 3
 
@@ -53,16 +53,18 @@ $$
 \phi_1(\omega_1(r)) = \phi_1(e^{2\pi i r}, 1) = e^{2\pi i (a_{11} r)}, \\
 \phi_1(\omega_2(r)) = \phi_1(1, e^{2\pi i r}) = e^{2\pi i (a_{12} r)}. \\
 $$
-De aquí, los números de enrollamiento son $E(\phi_1(\omega_1(r))) = a_{11}$ y $E(\phi_1(\omega_2(r))) = a_{12}$.
+Así pues, los números de enrollamiento son $E(\phi_1(\omega_1(r))) = a_{11}$ y $E(\phi_1(\omega_2(r))) = a_{12}$.
 
 
 
 #### Propiedad 4
 
-Suponga que $\phi$ es homotópico a un homeomorfismo $\psi$. Sea $\psi^{-1}: T^2 \to T^2 $ el inverso de $\psi$. Entonces $ D(\psi) D(\psi^{-1}) = D(\psi \circ \psi^{-1}) = D(id) = I$ y $D(\psi^{-1}) D(\psi) = D(\psi^{-1} \circ \psi) = D(id) = I$. Como $D(\phi) = D(\psi)$, lo anterior muestra que $D(\phi)$ es invertible sobre los enteros. 
+Suponga que $\phi$ es homotópico a un homeomorfismo $\psi$. Sea $\psi^{-1}: T^2 \to T^2 $ el inverso de $\psi$. Por la Propiedad 2, tenemos que $ D(\psi) D(\psi^{-1}) = D(\psi \circ \psi^{-1}) = D(id) = I$ y $D(\psi^{-1}) D(\psi) = D(\psi^{-1} \circ \psi) = D(id) = I$. Por la Propiedad 1, tenemos que $D(\phi) = D(\psi)$. Esto muestra que $D(\phi)$ es invertible sobre los enteros. 
 
-Conversamente, suponga que $D(\phi)$ es invertible en $\mathbb Z$.
+Conversamente, suponga que $D(\phi)$ es invertible en $\mathbb Z$. Por la Propiedad 3, existe un mapeo $\psi: T^2 \to T^2$ continuo tal que $D(\psi) = D(\phi)^{-1}$.
 
 ---
+
+[^1]: Véase la sección de *"Teoría de grado para el círculo*" del libro de Lee. 
 
 **DRAFT**
