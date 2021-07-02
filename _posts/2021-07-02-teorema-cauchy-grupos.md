@@ -10,6 +10,8 @@ En estas notas se muestran tres demostraciones del teorema de Cauchy.
 
 **Teorema de Cauchy.** Si $p$ es un primo que divide al orden de un grupo finito $G$, entonces $G$ tiene un subgrupo de orden $p$.
 
+![](https://upload.wikimedia.org/wikipedia/commons/e/e3/Augustin-Louis_Cauchy.jpg)
+
 Para la primera demostración, necesitamos el siguiente resultado. 
 
 **Lema.** Si $G$ es un grupo abeliano finito y $p$ es un primo que divide al orden de $G$, entonces existe un subgrupo de orden $p$. 
@@ -19,6 +21,8 @@ Para la primera demostración, necesitamos el siguiente resultado.
 *Demostración 1 del Teorema de Cauchy.* La demostración se realiza por inducción en $m$, donde $\mid G \mid = p m$. Si $m = 1$, $\mid G \mid = p$ por lo que $G$ es el subgrupo en cuestión.
 
 Suponga entonces que el teorema es cierto para todo grupo de orden menor que $p m$. Si $x \in G$, denotemos por $C_G(x)$ el centralizador de $x$ en $G$ y por $N_G(x)$ al normalizador de $x$ en $G$. El [Teorema de Orbita-Estabilizador](https://en.wikipedia.org/wiki/Group_action#Orbit-stabilizer_theorem) establece que $\mid N_G(x) \mid = [G: C_G(x)]$. Si $x$ no es un elemento del centro de $G$, entonces  $\mid N_G(x)\mid > 1$ por lo que $\mid C_G(x) \mid < \mid G \mid.$ Si $p $ divide al orden de $C_G(x)$, entonces la hipótesis de inducción asegura que $C_G(x)$ (y por tanto $G$) tiene un subgrupo de orden $p$. Así pues, suponga que $p$ no divide al orden de $C_G(x)$ para $x \in G \setminus Z(G)$. La [ecuación de clase](https://groupprops.subwiki.org/wiki/Class_equation_of_a_group) establece que
+
+
 $$
 \mid G \mid = \mid Z(G) \mid + \sum_{x_i \notin Z(G)} [G: C_G(x_i)].
 $$
@@ -35,10 +39,14 @@ La segunda demostración se obtiene como corolario del [Teorema de Sylow](https:
 La siguiente demostración elemental se debe a John McKay [^1]. 
 
 *Demostración 3 del Teorema de Cauchy.* Denotemos al elemento neutro de $G$ como $1$ y $\mid G \mid = n$. Consideremos el siguiente conjunto.
+
+
 $$
 S = \{(a_1, \ldots, a_p): a_i \in G, a_1 \cdots a_p = 1\}.
 $$
-Observe que $\mid S \mid = n^{p-1}$, ya que tenemos $n$ opciones en las $p-1$ primeras entradas, pero en la última solo una opción, pues debe ser el inverso de $a_1 \cdots a_{p-1}$. Establezcamos una relación de equivalencia en $S$ diciendo que dos $p-$tuplas son equivalentes si una es una permutación cíclica de la otra. Observe que si $a_1 = \cdots = a_{p}$, entonces la clase $[(a_1, \ldots, a_p)]$ consiste de un solo elemento. Por otro lado, si al menos dos componentes de $(a_1, \ldots, a_p)$ son distintas, entonces la clase $[(a_1, \dots, a_p)]$ tiene $p$ elementos. Sea $r$ el número de clases de equivalencia con un solo elemento y sea $s$ el número de clases de equivalencia con $p$ elementos. Como toda relación de equivalencia induce una partición en clases de equivalencia, tenemos que 
+Observe que $\mid S \mid = n^{p-1}$, ya que tenemos $n$ opciones en las $p-1$ primeras entradas, pero en la última solo una opción, pues debe ser el inverso de $a_1 \cdots a_{p-1}$. Establezcamos una relación de equivalencia en $S$ diciendo que dos $p-$tuplas son equivalentes si una es una permutación cíclica de la otra. Observe que si $a_1 = \cdots = a_{p}$, entonces la clase $[(a_1, \ldots, a_p)]$ consiste de un solo elemento. Por otro lado, si al menos dos componentes de $(a_1, \ldots, a_p)$ son distintas, entonces la clase $[(a_1, \dots, a_p)]$ tiene $p$ elementos. Sea $r$ el número de clases de equivalencia con un solo elemento y sea $s$ el número de clases de equivalencia con $p$ elementos. Como toda relación de equivalencia induce una partición en clases de equivalencia, tenemos que
+
+
 $$
 n^{p-1} = r + s p.
 $$
@@ -46,4 +54,5 @@ Como $p \mid n^{p-1} - sp $, entonces $p \mid r$. Luego, existe un $x\neq 1 \in 
 
 ---
 
-[^1]. Véase American Mathematical Monthly, Vol. 66, John McKay, *Another proof of Cauchy's group theorem.*
+[^1]: Véase American Mathematical Monthly, Vol. 66, John McKay, *Another proof of Cauchy's group theorem.*
+
