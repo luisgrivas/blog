@@ -24,11 +24,11 @@ Suponga entonces que el teorema es cierto para todo grupo de orden menor que $p 
 
 
 $$
-\mid G \mid = \mid Z(G) \mid + \sum_{x_i \notin Z(G)} [G: C_G(x_i)].
+\mid G \mid = \mid Z(G) \mid + \sum_{x \notin Z(G)} [G: C_G(x)].
 $$
 
 
-Como $\mid G \mid = \mid C_G(x_i)\mid \cdot \ [G: C_G(x_i)]$ y $p$ no divide a $\mid C_G(x_i)\mid$, entonces $p \mid [G: C_G(x_i)]$ para toda $x_i \notin Z(G)$. Pero entonces $p$ divide al orden de $Z(G)$, pues $p$ divide al orden de $G$ y $p$ divide a todos los términos de la sumatoria anterior. Como $Z(G)$ es un grupo abeliano, el Lema anterior asegura que $Z(G)$ (y por tanto $G$) tiene un elemento de orden $p$. $\blacksquare$
+Como $\mid G \mid = \mid C_G(x)\mid \cdot \ [G: C_G(x)]$ y $p$ no divide a $\mid C_G(x_i)\mid$, entonces $p \mid [G: C_G(x)]$ para toda $x \notin Z(G)$. Pero entonces $p$ divide al orden de $Z(G)$, pues $p$ divide al orden de $G$ y $p$ divide a todos los términos de la sumatoria anterior. Como $Z(G)$ es un grupo abeliano, el åLema anterior asegura que $Z(G)$ (y por tanto $G$) tiene un elemento de orden $p$. $\blacksquare$
 
 
 
