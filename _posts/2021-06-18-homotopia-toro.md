@@ -15,7 +15,7 @@ Demuestre que para todo mapeo continuo $\phi: T^2 \to T^2$, existe una matriz $D
 3. Para toda matriz $E$ de $2 \times 2$ con entradas en $\mathbb Z$ existe un mapeo continuo $\psi: T^2 \to T^2$ tal que $D(\phi) = E$.
 4. $\phi$ es homotópico a un homeomorfismo si y solo si $D(\phi)$ es invertible sobre los enteros.
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/1/17/Torus_cycles2.svg" alt="Toro" title="Generadores de lazos en el toro" style="zoom:15%;" />
+![](https://upload.wikimedia.org/wikipedia/commons/a/ac/Simple_torus_with_cycles.svg "Generadores de lazos en el toro")
 
 Este problema es interesante ya que establece una clasificación completa de mapeos continuos del toro en el toro, salvo homotopía. 
 
@@ -49,17 +49,17 @@ Con algunos ejemplos ya en en mente, procedamos a resolver cada uno de los punto
 
 
 
-#### Propiedad 1
+### Propiedad 1
 
 Sean $\phi $ y $\psi$ con homotópicos. Entonces $\phi_i $ es homotópico a $\psi_i$ para $i = 1, 2$. Esto implica que $\phi_i \circ \omega_j$ es homotópico a $\psi_i \circ \omega_j$. Luego, los lazos satisfacen que $E(\phi_i \circ \omega_j) = E(\psi_i \circ \omega_j)$. Por tanto $D(\phi) = D(\psi)$.
 
 
 
-#### Propiedad 2
+### Propiedad 2
 
 Si  $D(\psi ) = (a_{ij})$ y $D(\phi) = (b_{ij})$, entonces $D(\psi) D(\phi) = (c_{ij})$ con $c_{ij} = a_{i1} b_{1j} + a_{i2}b_{2j}.$ Por otro lado, si $D(\psi \circ \phi) = (d_{ij})$, por definición tenemos que $d_{ij} = E( (\psi \circ \phi)_i \circ \omega_j)$. Observe que, por definición,  $(\psi \circ \phi)_i = \psi_i(\phi(s, t))= \psi_i(\phi_1(s,t), \phi_2(s, t))$.
 
-#### Propiedad 3
+### Propiedad 3
 
 Sea $A = (a_{ij})$ una matriz $2 \times 2$ con entradas en $\mathbb Z$. Observe que el mapeo $\phi: T^2 \to T^2$ definido como $\phi(s, t) = (s^{a_{11}}t^{a_{12}}, s^{a_{21}}t^{a_{22}})$ satisface lo requerido. Por ejemplo, como $\phi_1(s, t) = s^{a_{11}}t^{a_{12}}$, entonces
 
@@ -73,10 +73,11 @@ Así pues, los números de enrollamiento son $E(\phi_1(\omega_1(r))) = a_{11}$ y
 
 
 
-#### Propiedad 4
+### Propiedad 4
 
 Suponga que $\phi$ es homotópico a un homeomorfismo $\psi$. Sea $\psi^{-1}: T^2 \to T^2 $ el inverso de $\psi$. Por la Propiedad 2, tenemos que $ D(\psi) D(\psi^{-1}) = D(\psi \circ \psi^{-1}) = D(id) = I$ y $D(\psi^{-1}) D(\psi) = D(\psi^{-1} \circ \psi) = D(id) = I$. Por la Propiedad 1, tenemos que $D(\phi) = D(\psi)$. Esto muestra que $D(\phi)$ es invertible sobre los enteros. 
 
 Conversamente, suponga que $D(\phi)$ es invertible en $\mathbb Z$. Por la Propiedad 3, existe un mapeo $\psi: T^2 \to T^2$ continuo tal que $D(\psi) = D(\phi)^{-1}$.
 
-**DRAFT**
+----
+
