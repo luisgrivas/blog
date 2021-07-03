@@ -10,7 +10,7 @@ En estas notas se muestran tres demostraciones del teorema de Cauchy. En lo sigu
 
 **Teorema de Cauchy.** Si $p$ es un primo que divide al orden de un grupo finito $G$, entonces $G$ tiene un elemento de orden $p$.
 
-![](https://upload.wikimedia.org/wikipedia/commons/e/e3/Augustin-Louis_Cauchy.jpg)
+![Cauchy](https://upload.wikimedia.org/wikipedia/commons/e/e3/Augustin-Louis_Cauchy.jpg "Cauchy")
 
 Para la primera demostración necesitamos el siguiente resultado.
 
@@ -28,7 +28,7 @@ $$
 $$
 
 
-Como $\mid G \mid = \mid C_G(x)\mid \cdot \ [G: C_G(x)]$ y $p$ no divide a $\mid C_G(x_i)\mid$, entonces $p \mid [G: C_G(x)]$ para toda $x \notin Z(G)$. Pero entonces $p$ divide al orden de $Z(G)$, pues $p$ divide al orden de $G$ y $p$ divide a todos los términos de la sumatoria anterior. Como $Z(G)$ es un grupo abeliano, el åLema anterior asegura que $Z(G)$ (y por tanto $G$) tiene un elemento de orden $p$. $\blacksquare$
+Como $\mid G \mid = \mid C_G(x)\mid \cdot \ [G: C_G(x)]$ y $p$ no divide a $\mid C_G(x)\mid$, entonces $p \mid [G: C_G(x)]$ para toda $x \notin Z(G)$. Pero entonces $p$ divide al orden de $Z(G)$, pues $p$ divide al orden de $G$ y $p$ divide a todos los términos de la sumatoria anterior. Como $Z(G)$ es un grupo abeliano, el Lema anterior asegura que $Z(G)$ (y por tanto $G$) tiene un elemento de orden $p$. $\blacksquare$
 
 
 
