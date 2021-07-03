@@ -8,14 +8,14 @@ tags: homotopia, topología-algebraica
 
 En el libro *Introduction to Topological Manifolds* de John M. Lee aparece el siguiente problema.
 
-> Demuestre que para todo mapeo continuo $\phi: T^2 \to T^2$, existe una matriz $D(\phi)$ de $2 \times 2$ con entradas en $\mathbb Z$ con las siguientes propiedades:
->
-> 1. Dos mapeos continuos $\phi$ y $\psi$ son homotópicos si y solo si $D(\phi) = D(\psi)$.
-> 2. $D(\psi \circ \phi)$ es igual al producto $D(\psi) D(\phi)$.
-> 3. Para toda matriz $E$ de $2 \times 2$ con entradas en $\mathbb Z$ existe un mapeo continuo $\psi: T^2 \to T^2$ tal que $D(\phi) = E$.
-> 4. $\phi$ es homotópico a un homeomorfismo si y solo si $D(\phi)$ es invertible sobre los enteros.
+Demuestre que para todo mapeo continuo $\phi: T^2 \to T^2$, existe una matriz $D(\phi)$ de $2 \times 2$ con entradas en $\mathbb Z$ con las siguientes propiedades:
 
+1. Dos mapeos continuos $\phi$ y $\psi$ son homotópicos si y solo si $D(\phi) = D(\psi)$.
+2. $D(\psi \circ \phi)$ es igual al producto $D(\psi) D(\phi)$.
+3. Para toda matriz $E$ de $2 \times 2$ con entradas en $\mathbb Z$ existe un mapeo continuo $\psi: T^2 \to T^2$ tal que $D(\phi) = E$.
+4. $\phi$ es homotópico a un homeomorfismo si y solo si $D(\phi)$ es invertible sobre los enteros.
 
+<img src="https://upload.wikimedia.org/wikipedia/commons/1/17/Torus_cycles2.svg" alt="Toro" title="Generadores de lazos en el toro" style="zoom:15%;" />
 
 Este problema es interesante ya que establece una clasificación completa de mapeos continuos del toro en el toro, salvo homotopía. 
 
